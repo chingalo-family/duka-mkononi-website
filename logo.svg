@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#065808;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a9c0d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background rounded rectangle -->
+  <rect width="512" height="512" rx="100" fill="url(#brandGrad)"/>
+  
+  <!-- Shop/Store icon representation -->
+  <!-- Building structure -->
+  <rect x="140" y="200" width="232" height="220" fill="white" opacity="0.95" rx="8"/>
+  
+  <!-- Awning/Shop front -->
+  <path d="M 130 200 L 382 200 L 372 170 L 140 170 Z" fill="white" opacity="0.9"/>
+  
+  <!-- Shop windows -->
+  <rect x="165" y="230" width="70" height="70" fill="#065808" opacity="0.3" rx="4"/>
+  <rect x="277" y="230" width="70" height="70" fill="#065808" opacity="0.3" rx="4"/>
+  
+  <!-- Door -->
+  <rect x="217" y="330" width="78" height="90" fill="#065808" opacity="0.4" rx="4"/>
+  <circle cx="275" cy="375" r="6" fill="white" opacity="0.8"/>
+  
+  <!-- Mobile phone overlay -->
+  <g transform="translate(320, 280)">
+    <rect x="0" y="0" width="90" height="150" rx="12" fill="white" opacity="0.95"/>
+    <rect x="5" y="5" width="80" height="140" rx="8" fill="#065808"/>
+    <rect x="10" y="20" width="70" height="100" rx="4" fill="white" opacity="0.15"/>
+    <circle cx="45" cy="135" r="8" fill="white" opacity="0.3"/>
+  </g>
+  
+  <!-- Text "DM" monogram in the center -->
+  <text x="256" y="280" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="white" text-anchor="middle" opacity="0.15">DM</text>
+</svg>
