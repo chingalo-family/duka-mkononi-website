@@ -89,17 +89,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Stats animation (count up effect)
     function animateValue(element, start, end, duration) {
         const range = end - start;
-        const increment = range / (duration / 16);
-        let current = start;
+        const startTime = performance.now();
         
-        const timer = setInterval(function() {
-            current += increment;
-            if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
-                current = end;
-                clearInterval(timer);
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            current = start + (range * progress);
+            
+            if (progress < 1) {
+                element.textContent = Math.round(current).toLocaleString();
+                requestAnimationFrame(update);
+            } else {
+                element.textContent = Math.round(end).toLocaleString();
             }
-            element.textContent = Math.round(current).toLocaleString();
-        }, 16);
+        }
+        
+        requestAnimationFrame(update);
     }
     
     // Trigger stat animations when visible
@@ -141,11 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // Console greeting
-    console.log('%c🚀 Duka Mkononi Website', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-    console.log('%cBuilt with ❤️ by Chingalo Family', 'font-size: 14px; color: #6b7280;');
-    console.log('%cGitHub: https://github.com/chingalo-family/duka-mkononi-app', 'font-size: 12px; color: #6b7280;');
 });
 
 // Handle page visibility change
