@@ -12,10 +12,11 @@
     <header>
         <div class="header-container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">📦</div>
+                <div class="logo-icon">🏪</div>
                 <span>Duka Mkononi</span>
             </a>
-            <nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#pricing">Pricing</a></li>
@@ -342,5 +343,19 @@
     <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         ↑
     </div>
+    
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#main-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('main-nav').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
