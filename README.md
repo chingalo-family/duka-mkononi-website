@@ -28,6 +28,30 @@ The website includes the following pages in both English and Swahili:
 - ✅ Easy language switching
 - ✅ Clean and professional UI/UX
 
+## 🚀 Local Development
+
+To run the website locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/chingalo-family/wealth-path-website.git
+   cd wealth-path-website
+   ```
+
+2. Open `index.html` in your browser:
+   ```bash
+   # Using Python
+   python -m http.server 8000
+   
+   # Using Node.js
+   npx http-server
+   
+   # Or simply open the file
+   open index.html
+   ```
+
+3. Visit `http://localhost:8000` in your browser:
+
 ## 🚀 Deployment
 
 This website is automatically deployed to GitHub Pages from the main branch.
