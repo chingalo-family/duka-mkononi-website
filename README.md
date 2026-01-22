@@ -40,7 +40,7 @@ To deploy:
 
 - **Email:** chingalo.family@gmail.com
 - **Phone:** +255 687 188 937
-- **Location:** Ermari Mikadi, Dar es Salaam, Tanzania
+- **Location:** Kimara Michungwani, Dar es Salaam, Tanzania
 
 ## 📝 License
 

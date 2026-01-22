@@ -319,6 +319,11 @@ section {
     font-size: 32px;
 }
 
+.service-icon img {
+    width: 40px;
+    height: 40px;
+}
+
 .service-card h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -486,6 +491,12 @@ section {
     justify-content: center;
     margin: 0 auto 1.5rem;
     font-size: 32px;
+}
+
+.value-icon img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) saturate(100%);
 }
 
 .value-card h3 {
