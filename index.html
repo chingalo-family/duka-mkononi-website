@@ -33,14 +33,14 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .trial-ribbon {
-            @apply absolute top-5 -right-12 w-48 bg-accent-gold text-primary text-[10px] font-black py-1 text-center rotate-45 shadow-sm uppercase tracking-widest z-20;
+            @apply absolute top-10 -right-12 w-48 bg-accent-gold text-primary text-[8px] font-black py-1 text-center rotate-45 shadow-sm uppercase tracking-widest z-20;
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-[#111811] dark:text-white transition-colors duration-200">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<body class="bg-background-light dark:bg-background-dark text-[#111811] dark:text-white transition-colors duration-200 overflow-x-hidden">
+<div class="flex h-auto min-h-screen w-full flex-col group/design-root">
 <div class="layout-container flex h-full grow flex-col">
-<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md px-4 lg:px-40 py-4">
+<header class="sticky top-0 z-[9999] flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md px-4 lg:px-40 py-4">
 <div class="flex items-center gap-3 text-primary dark:text-white">
 <div class="size-10 flex items-center justify-center bg-primary rounded-xl text-white">
 <span class="material-symbols-outlined text-2xl">storefront</span>
@@ -56,13 +56,10 @@
 <a class="text-[#111811] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#contact">Contact</a>
 </nav>
 <div class="flex items-center gap-3">
-<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 px-4 border border-primary/20 bg-white text-primary text-xs font-bold hover:bg-gray-50 transition-all gap-2">
+<a href="index-sw.html" class="flex cursor-pointer items-center justify-center rounded-lg h-10 px-4 border border-primary/20 bg-white text-primary text-xs font-bold hover:bg-gray-50 transition-all gap-2">
 <span class="material-symbols-outlined text-lg">language</span>
 <span><b class="text-primary font-black">ENG</b> | SW</span>
-</button>
-<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold hover:brightness-110 transition-all">
-                        Login
-                    </button>
+</a>
 </div>
 </div>
 </header>
@@ -354,8 +351,12 @@
                         </p>
 </div>
 <div class="flex flex-wrap justify-center gap-6 relative z-10">
-<a class="transition-transform hover:scale-105 active:scale-95" href="#">
-<img alt="Google Play Store" class="h-[60px] shadow-lg rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA1_GInP2dixkY3cg-_XiB3Gsl6cbUqtFqlBsMAVC7GfN45lysHFCwGfNldIAWSrDRRPkMYvWUjgKGhsarws6yG-MwMJYpTSAmSulK8P9AYC7LWaG_JhINIixlNcZthRUPX9lWXEY8POP9aYTkz_y93xeu8f1ybEHA7XBl8lvhfoj3cCYfyDA1NsaE8jWwCh1naOcBQbfIUXWvFyVFN5V48NGph90tiJ7AvtqvKvp8N753kf--6JpGP0j3ZzHctHbWHXKKTvIksRam"/>
+<a class="flex items-center gap-3 h-[60px] px-6 rounded-xl bg-white border-2 border-primary text-primary shadow-lg hover:bg-primary hover:text-white transition-all" href="https://github.com/chingalo-family/duka-mkononi-public-releases/releases/download/v1.0.3/duka-mkononi-app-v1.0.3.apk" download>
+<span class="material-symbols-outlined text-3xl">android</span>
+<div class="text-left leading-none">
+<p class="text-[10px] uppercase font-bold">Download on</p>
+<p class="text-lg font-bold">Google Play</p>
+</div>
 </a>
 <div class="relative group">
 <div class="flex items-center gap-3 h-[60px] px-6 rounded-xl border-2 border-gray-300 bg-gray-50 text-gray-400 cursor-not-allowed grayscale">
@@ -365,6 +366,9 @@
 <p class="text-lg font-bold">App Store</p>
 </div>
 </div>
+<div class="hidden group-hover:block absolute -top-12 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs py-2 px-3 rounded whitespace-nowrap">
+                                iOS version coming soon!
+                            </div>
 </div>
 </div>
 <div class="pt-4 text-primary/40 font-medium">Available for Android 8.0 and above users</div>
@@ -389,29 +393,33 @@
 <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
 <span class="material-symbols-outlined">mail</span>
 </div>
-<span class="font-bold">info@dukamkononi.co.tz</span>
+<span class="font-bold">chingalo-family@gmail.com</span>
 </div>
 </div>
 </div>
 <div class="bg-white p-8 lg:p-12 rounded-3xl shadow-xl border border-primary/5">
-<form class="flex flex-col gap-6">
+<form id="contactForm" class="flex flex-col gap-6">
+<!-- FormSubmit.co Configuration -->
+<input type="hidden" name="_subject" value="New Contact Form Submission - Duka Mkononi">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
 <div class="flex flex-col gap-2">
 <label class="text-sm font-bold text-gray-700" for="name">Full Name</label>
-<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="name" placeholder="Enter your name here" type="text"/>
+<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="name" name="name" placeholder="Enter your name here" type="text" required/>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="flex flex-col gap-2">
 <label class="text-sm font-bold text-gray-700" for="email">Email</label>
-<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="email" placeholder="example@gmail.com" type="email"/>
+<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="email" name="email" placeholder="example@gmail.com" type="email" required/>
 </div>
 <div class="flex flex-col gap-2">
 <label class="text-sm font-bold text-gray-700" for="phone">Phone Number</label>
-<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="phone" placeholder="+255..." type="tel"/>
+<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="phone" name="phone" placeholder="+255..." type="tel" required/>
 </div>
 </div>
 <div class="flex flex-col gap-2">
 <label class="text-sm font-bold text-gray-700" for="message">Your Message</label>
-<textarea class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50 min-h-[150px]" id="message" placeholder="Tell us how we can help you..."></textarea>
+<textarea class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50 min-h-[150px]" id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold h-14 rounded-xl hover:brightness-110 shadow-lg transition-all" type="submit">
                                 Send Message
@@ -422,7 +430,7 @@
 </section>
 </main>
 <footer class="bg-primary text-white pt-24 pb-12 px-4 lg:px-40">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 border-b border-white/10 pb-16">
 <div class="flex flex-col gap-8">
 <div class="flex items-center gap-3">
 <div class="size-10 flex items-center justify-center bg-white rounded-xl text-primary">
@@ -446,21 +454,11 @@
 </div>
 </div>
 <div>
-<h4 class="font-bold mb-8 text-xl text-accent-gold">Features</h4>
-<ul class="flex flex-col gap-4 text-white/70">
-<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Retail Shop</a></li>
-<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Stock &amp; Inventory</a></li>
-<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Business Reports</a></li>
-<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Multi-branch</a></li>
-</ul>
-</div>
-<div>
 <h4 class="font-bold mb-8 text-xl text-accent-gold">Company</h4>
 <ul class="flex flex-col gap-4 text-white/70">
 <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#about"><span class="material-symbols-outlined text-xs">arrow_forward</span> About Us</a></li>
-<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Blog</a></li>
-<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Terms &amp; Conditions</a></li>
-<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="terms.html"><span class="material-symbols-outlined text-xs">arrow_forward</span> Terms &amp; Conditions</a></li>
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="privacy.html"><span class="material-symbols-outlined text-xs">arrow_forward</span> Privacy Policy</a></li>
 </ul>
 </div>
 <div>
@@ -477,7 +475,7 @@
 <span class="material-symbols-outlined text-accent-gold">mail</span>
 <div class="flex flex-col">
 <span class="text-xs uppercase font-bold text-white/40">Email</span>
-<span class="text-white">info@dukamkononi.co.tz</span>
+<span class="text-white">chingalo-family@gmail.com</span>
 </div>
 </li>
 <li class="flex items-start gap-4">
@@ -491,14 +489,15 @@
 </div>
 </div>
 <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-xs">
-<p>© 2024 Duka Mkononi. All rights reserved.</p>
+<p>© <span id="currentYear"></span> Duka Mkononi. All rights reserved.</p>
 <div class="flex gap-6">
-<a class="hover:text-white underline" href="#">Privacy Policy</a>
-<a class="hover:text-white underline" href="#">Terms &amp; Conditions</a>
+<a class="hover:text-white underline" href="privacy.html">Privacy Policy</a>
+<a class="hover:text-white underline" href="terms.html">Terms &amp; Conditions</a>
 </div>
 </div>
 </footer>
 </div>
 </div>
-
-</body></html>
+<script src="scripts/contact-form.js"></script>
+</body>
+</html>

@@ -12,9 +12,9 @@
                 extend: {
                     colors: {
                         "primary": "#065808",
-                        "accent": "#ffc107",
-                        "text-dark": "#111811",
+                        "accent-gold": "#ffc107",
                         "background-light": "#f8faf8",
+                        "background-dark": "#0a1a0a",
                     },
                     fontFamily: {
                         "sans": ["Poppins", "sans-serif"],
@@ -45,30 +45,26 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
-<header class="sticky top-0 z-50 w-full bg-[#065808] text-white shadow-lg">
-<div class="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4">
-<div class="flex items-center gap-3">
-<div class="text-white size-8">
-<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V44Z" fill-rule="evenodd"></path>
-</svg>
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white/90 backdrop-blur-md px-4 lg:px-40 py-4">
+<a href="index.html" class="flex items-center gap-3 text-primary hover:opacity-80 transition-opacity">
+<div class="size-10 flex items-center justify-center bg-primary rounded-xl text-white">
+<span class="material-symbols-outlined text-2xl">storefront</span>
 </div>
-<h2 class="text-xl font-bold tracking-tight text-white">Duka Mkononi</h2>
-</div>
+<h2 class="text-primary text-xl font-extrabold leading-tight tracking-tight">Duka Mkononi</h2>
+</a>
+<div class="flex flex-1 justify-end gap-6 items-center">
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-white hover:text-accent transition-colors text-sm font-medium" href="#">Home</a>
-<a class="text-white hover:text-accent transition-colors text-sm font-medium" href="#">Features</a>
-<a class="text-white hover:text-accent transition-colors text-sm font-medium" href="#">Pricing</a>
-<a class="text-white hover:text-accent transition-colors text-sm font-medium" href="#">About Us</a>
+<a class="text-[#111811] text-sm font-semibold hover:text-primary transition-colors" href="index.html#services">Services</a>
+<a class="text-[#111811] text-sm font-semibold hover:text-primary transition-colors" href="index.html#pricing">Pricing</a>
+<a class="text-[#111811] text-sm font-semibold hover:text-primary transition-colors" href="index.html#about">About Us</a>
+<a class="text-[#111811] text-sm font-semibold hover:text-primary transition-colors" href="index.html#download">Download</a>
+<a class="text-[#111811] text-sm font-semibold hover:text-primary transition-colors" href="index.html#contact">Contact</a>
 </nav>
-<div class="flex items-center gap-6">
-<div class="flex items-center bg-black/20 rounded-full p-1 text-[10px] font-bold">
-<button class="px-3 py-1 rounded-full bg-accent text-black shadow-sm">ENG</button>
-<button class="px-3 py-1 rounded-full text-white/60 hover:text-white transition-colors">SW</button>
-</div>
-<button class="bg-[#ffc107] text-black px-6 py-2.5 rounded-full text-sm font-bold shadow-md hover:brightness-110 active:scale-95 transition-all">
-                Start 14 Days Free
-            </button>
+<div class="flex items-center gap-3">
+<a href="privacy-sw.html" class="flex cursor-pointer items-center justify-center rounded-lg h-10 px-4 border border-primary/20 bg-white text-primary text-xs font-bold hover:bg-gray-50 transition-all gap-2">
+<span class="material-symbols-outlined text-lg">language</span>
+<span><b class="text-primary font-black">ENG</b> | SW</span>
+</a>
 </div>
 </div>
 </header>
@@ -266,79 +262,74 @@
 </div>
 </div>
 </main>
-<footer class="bg-[#065808] text-white pt-16 pb-8 px-6">
-<div class="max-w-[1280px] mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-3 mb-6">
-<div class="text-white size-8">
-<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
-</svg>
+<footer class="bg-primary text-white pt-24 pb-12 px-4 lg:px-40">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 border-b border-white/10 pb-16">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3">
+<div class="size-10 flex items-center justify-center bg-white rounded-xl text-primary">
+<span class="material-symbols-outlined text-2xl">storefront</span>
 </div>
-<h2 class="text-xl font-bold tracking-tight text-white">Duka Mkononi</h2>
+<h2 class="text-2xl font-black">Duka Mkononi</h2>
 </div>
-<p class="text-white/70 text-sm leading-relaxed mb-6">
-                    The best solution for managing your shop wherever you are. Simplify your sales, inventory, and reports today.
+<p class="text-white/70 leading-relaxed">
+                    We help small and medium-sized enterprises in Tanzania manage their businesses with digital ease and bring efficiency to daily operations.
                 </p>
-<div class="space-y-3">
-<div class="flex items-start gap-3 text-sm text-white/80">
-<span class="material-symbols-outlined text-accent text-sm mt-0.5">location_on</span>
-<span>Kimara Mwisho, Dar es Salaam, Tanzania</span>
-</div>
-<div class="flex items-center gap-3 text-sm text-white/80">
-<span class="material-symbols-outlined text-accent text-sm">call</span>
-<span>Phone: +255 687 168 637</span>
-</div>
-<div class="flex items-center gap-3 text-sm text-white/80">
-<span class="material-symbols-outlined text-accent text-sm">email</span>
-<span>Email: chingalo-family@gmail.com</span>
-</div>
-</div>
-</div>
-<div>
-<h4 class="text-accent font-bold mb-6">Quick Links</h4>
-<ul class="space-y-4 text-sm text-white/80">
-<li><a class="hover:text-accent transition-colors" href="#">Home</a></li>
-<li><a class="hover:text-accent transition-colors" href="#">Features</a></li>
-<li><a class="hover:text-accent transition-colors" href="#">Pricing</a></li>
-<li><a class="hover:text-accent transition-colors" href="#">About Us</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-accent font-bold mb-6">Help</h4>
-<ul class="space-y-4 text-sm text-white/80">
-<li><a class="hover:text-accent transition-colors" href="#">FAQs</a></li>
-<li><a class="hover:text-accent transition-colors" href="#">Contact Us</a></li>
-<li><a class="hover:text-accent transition-colors" href="#">User Guide</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-accent font-bold mb-6">Legal</h4>
-<ul class="space-y-4 text-sm text-white/80">
-<li><a class="text-accent font-bold underline" href="#">Privacy Policy</a></li>
-<li><a class="hover:text-accent transition-colors" href="#">Terms and Conditions</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex flex-col gap-4">
-<p class="text-white/50 text-xs">© 2024 Duka Mkononi. All rights reserved.</p>
 <div class="flex gap-4">
-<img alt="Google Play Store" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAzkQ_4wDr9_fOj_UxW5WzrxKOy3TIBWLOJQnNcJXnHqtpbSTy1alF4YhnNyk_4R-OZmk68LFO5ELj7Pac4Lea4Wltj_YXl7-JS6yAHUKHZdpUGSMLZ5Jh_aj2dK077Iy9Ey8gSN_g2vfNZU-f5wL41a2dNxObuowA6h6XMtNkG3NifDsxkp1Gi2wdAI0lAHaW6vZj9VAMxxNWo9sga89hW_1Nh_hw3kczsa5JTMaTuUPXbZR04wQb1kp_8PzBn5rFHX5PRoJ23WFL"/>
-<img alt="App Store" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsn6PENM9ZedoKXdruCiKdoozrU4ayB0VbELc5L7MdDttLbw6tzLYdgGEkhgrjp_PCxqaBRU62B1_rHlMmoiK3PPT80EveTsE2FbqIAimksT4L3jr6nxIym9rdv1hKAMP0iOo6OvWQbv5-DUWh0oYNwVOWZefpOVhfLDWesFe6dkJWghOVapQhaF4h9q8p2LJQ-rSTeH33Ft30EcK5gNnyoG1dWoVm2FZC5N0HW6VKvMihwwmiBPw449YJpCXeBL9W7194OSinmXoR"/>
+<a class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent-gold hover:text-primary transition-all shadow-lg" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+<a class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent-gold hover:text-primary transition-all shadow-lg" href="#">
+<span class="material-symbols-outlined text-xl">chat</span>
+</a>
+<a class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent-gold hover:text-primary transition-all shadow-lg" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
 </div>
 </div>
+
+<div>
+<h4 class="font-bold mb-8 text-xl text-accent-gold">Company</h4>
+<ul class="flex flex-col gap-4 text-white/70">
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="index.html#about"><span class="material-symbols-outlined text-xs">arrow_forward</span> About Us</a></li>
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="terms.html"><span class="material-symbols-outlined text-xs">arrow_forward</span> Terms &amp; Conditions</a></li>
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="privacy.html"><span class="material-symbols-outlined text-xs">arrow_forward</span> Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-8 text-xl text-accent-gold">Contact Us</h4>
+<ul class="flex flex-col gap-6 text-white/70">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-accent-gold">call</span>
+<div class="flex flex-col">
+<span class="text-xs uppercase font-bold text-white/40">Phone</span>
+<span class="text-white">+255 687 168 637</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-accent-gold">mail</span>
+<div class="flex flex-col">
+<span class="text-xs uppercase font-bold text-white/40">Email</span>
+<span class="text-white">chingalo-family@gmail.com</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-accent-gold">location_on</span>
+<div class="flex flex-col">
+<span class="text-xs uppercase font-bold text-white/40">Location</span>
+<span class="text-white">Kimara Mwisho, Dar es Salaam, Tanzania</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-xs">
+<p>© <span id="currentYear"></span> Duka Mkononi. All rights reserved.</p>
 <div class="flex gap-6">
-<a class="text-white/50 hover:text-accent transition-colors" href="#"><span class="material-symbols-outlined text-2xl">social_leaderboard</span></a>
-<a class="text-white/50 hover:text-accent transition-colors" href="#"><span class="material-symbols-outlined text-2xl">language</span></a>
-<a class="text-white/50 hover:text-accent transition-colors" href="#"><span class="material-symbols-outlined text-2xl">public</span></a>
-</div>
+<a class="hover:text-white underline" href="privacy.html">Privacy Policy</a>
+<a class="hover:text-white underline" href="terms.html">Terms &amp; Conditions</a>
 </div>
 </div>
 </footer>
-<button class="fixed bottom-8 right-8 size-14 bg-accent text-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 z-50" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-<span class="material-symbols-outlined font-bold">arrow_upward</span>
-</button>
-
-</body></html>
+<script src="contact-form.js"></script>
+</body>
+</html>
