@@ -419,7 +419,7 @@
 </section>
 </main>
 <footer class="bg-primary text-white pt-24 pb-12 px-4 lg:px-40">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 border-b border-white/10 pb-16">
 <div class="flex flex-col gap-8">
 <div class="flex items-center gap-3">
 <div class="size-10 flex items-center justify-center bg-white rounded-xl text-primary">
@@ -440,6 +440,16 @@
 <a class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent-gold hover:text-primary transition-all shadow-lg" href="#">
 <span class="material-symbols-outlined text-xl">mail</span>
 </a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-8 text-xl text-accent-gold">Huduma</h4>
+<ul class="flex flex-col gap-4 text-white/70">
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Duka Rejareja</a></li>
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Stoku na Stoo</a></li>
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Ripoti za Biashara</a></li>
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">arrow_forward</span> Matawi Mengi</a></li>
+</ul>
 </div>
 <div>
 <h4 class="font-bold mb-8 text-xl text-accent-gold">Kampuni</h4>
@@ -464,21 +474,21 @@
 <span class="material-symbols-outlined text-accent-gold">mail</span>
 <div class="flex flex-col">
 <span class="text-xs uppercase font-bold text-white/40">Email</span>
-<span class="text-white">chingalo-family@gmal.com</span>
+<span class="text-white">chingalo-family@gmail.com</span>
 </div>
 </li>
 <li class="flex items-start gap-4">
 <span class="material-symbols-outlined text-accent-gold">location_on</span>
 <div class="flex flex-col">
 <span class="text-xs uppercase font-bold text-white/40">Mahali</span>
-<span class="text-white">Kimara mwisho, Dar es Salaam, Tanzania</span>
+<span class="text-white">Kimara Mwisho, Dar es Salaam, Tanzania</span>
 </div>
 </li>
 </ul>
 </div>
 </div>
 <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-xs">
-<p>© 2024 Duka Mkononi. Haki zote zimehifadhiwa.</p>
+<p>© <span id="currentYear"></span> Duka Mkononi. Haki zote zimehifadhiwa.</p>
 <div class="flex gap-6">
 <a class="hover:text-white underline" href="privacy-sw.html">Sera ya Faragha</a>
 <a class="hover:text-white underline" href="terms-sw.html">Vigezo na Masharti</a>
@@ -487,27 +497,6 @@
 </footer>
 </div>
 </div>
-<script>
-// Handle contact form submission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = {
-        name: document.getElementById('jina').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('simu').value,
-        message: document.getElementById('ujumbe').value
-    };
-    
-    // Log the form data to console (you can replace this with actual API call)
-    console.log('Form submitted:', formData);
-    
-    // Show success message
-    alert('Asante kwa ujumbe wako! Tutawasiliana nawe ndani ya saa 24.');
-    
-    // Reset form
-    this.reset();
-});
-</script>
-
-</body></html>
+<script src="contact-form.js"></script>
+</body>
+</html>
