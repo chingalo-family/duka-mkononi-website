@@ -506,10 +506,10 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
     const formData = {
-        name: document.getElementById('jina').value || document.getElementById('name').value,
+        name: document.getElementById('jina').value,
         email: document.getElementById('email').value,
-        phone: document.getElementById('simu').value || document.getElementById('phone').value,
-        message: document.getElementById('ujumbe').value || document.getElementById('message').value
+        phone: document.getElementById('simu').value,
+        message: document.getElementById('ujumbe').value
     };
     
     // Log the form data to console (you can replace this with actual API call)
