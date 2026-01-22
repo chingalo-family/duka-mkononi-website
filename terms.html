@@ -61,61 +61,64 @@
 </div>
 </div>
 </header>
-<main class="flex-1 px-6 lg:px-12 py-12">
-<div class="mx-auto max-w-[1200px]">
-<div class="no-print mb-8 flex items-center gap-2 text-sm">
-<a class="text-primary font-medium hover:underline" href="#">Home</a>
-<span class="text-slate-400">/</span>
-<span class="text-slate-500 font-medium">Terms and Conditions</span>
+<main class="flex-1 w-full max-w-[1280px] mx-auto px-6 py-12">
+<div class="flex flex-col lg:flex-row gap-12">
+<aside class="w-full lg:w-72 flex-shrink-0">
+<div class="sticky top-28 flex flex-col gap-6 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+<div>
+<h3 class="text-primary text-lg font-bold">Contents</h3>
+<div class="h-1 w-10 bg-accent mt-1 rounded-full"></div>
 </div>
-<div class="mb-12 flex flex-col gap-4 border-b border-slate-200 pb-10">
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/5 text-primary border-r-4 border-primary font-semibold transition-all" href="#introduction">
+<span class="material-symbols-outlined text-xl">info</span>
+<span class="text-sm">1. Introduction</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#registration">
+<span class="material-symbols-outlined text-xl">person_add</span>
+<span class="text-sm font-medium">2. Account Registration</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#usage">
+<span class="material-symbols-outlined text-xl">devices</span>
+<span class="text-sm font-medium">3. Software Usage</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#payments">
+<span class="material-symbols-outlined text-xl">payments</span>
+<span class="text-sm font-medium">4. Payments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#trial">
+<span class="material-symbols-outlined text-xl">verified</span>
+<span class="text-sm font-medium">5. Free Trial</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#responsibilities">
+<span class="material-symbols-outlined text-xl">task_alt</span>
+<span class="text-sm font-medium">6. Responsibilities</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#liability">
+<span class="material-symbols-outlined text-xl">gavel</span>
+<span class="text-sm font-medium">7. Liability</span>
+</a>
+</nav>
+<button class="mt-4 flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-primary text-white font-semibold hover:bg-primary/90 transition-all shadow-md" onclick="window.print()">
+<span class="material-symbols-outlined text-lg">print</span>
+<span class="text-sm">Print Copy</span>
+</button>
+</div>
+</aside>
+<article class="flex-1 min-w-0">
+<div class="mb-8 flex items-center gap-2 text-sm">
+<a class="text-primary font-medium hover:underline" href="index.html">Home</a>
+<span class="text-gray-400">/</span>
+<span class="text-gray-500 font-medium">Terms and Conditions</span>
+</div>
+<div class="mb-12 flex flex-col gap-4 border-b border-gray-200 pb-8">
 <h1 class="text-4xl lg:text-5xl font-black text-primary tracking-tight">Terms and Conditions</h1>
-<div class="flex items-center gap-2 text-slate-500">
+<div class="flex items-center gap-2 text-gray-500">
 <span class="material-symbols-outlined text-base">calendar_today</span>
 <p class="text-base font-medium">Last Updated: January 2024</p>
 </div>
 </div>
-<div class="flex flex-col lg:flex-row gap-16">
-<aside class="no-print lg:sticky lg:top-32 h-fit lg:w-80 flex-shrink-0">
-<div class="rounded-2xl bg-white shadow-sm border border-slate-100 p-8">
-<h3 class="mb-6 text-xs font-bold uppercase tracking-widest text-slate-400">Contents</h3>
-<nav class="flex flex-col gap-1">
-<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#introduction">
-<span class="material-symbols-outlined text-sm">info</span>
-<span class="text-sm">1. Introduction</span>
-</a>
-<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#registration">
-<span class="material-symbols-outlined text-sm">person_add</span>
-<span class="text-sm">2. Account Registration</span>
-</a>
-<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#usage">
-<span class="material-symbols-outlined text-sm">devices</span>
-<span class="text-sm">3. Software Usage</span>
-</a>
-<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#payments">
-<span class="material-symbols-outlined text-sm">payments</span>
-<span class="text-sm">4. Payments and Subscriptions</span>
-</a>
-<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#trial">
-<span class="material-symbols-outlined text-sm">verified</span>
-<span class="text-sm">5. 14-Day Free Trial</span>
-</a>
-<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#responsibilities">
-<span class="material-symbols-outlined text-sm">task_alt</span>
-<span class="text-sm">6. User Responsibilities</span>
-</a>
-<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#liability">
-<span class="material-symbols-outlined text-sm">gavel</span>
-<span class="text-sm">7. Limitation of Liability</span>
-</a>
-</nav>
-<button class="mt-8 flex w-full items-center justify-center gap-2 rounded-xl border-2 border-primary/20 py-3 text-sm font-bold text-primary hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm" onclick="window.print()">
-<span class="material-symbols-outlined text-xl">print</span>
-                        Print Copy
-                    </button>
-</div>
-</aside>
-<article class="print-full-width flex-1 max-w-3xl space-y-16 pb-24 text-slate-700 leading-relaxed">
+<div class="space-y-16 pb-24 text-gray-700 leading-relaxed">
 <section class="scroll-mt-32" id="introduction">
 <h2 class="mb-6 text-3xl font-bold text-primary">1. Introduction</h2>
 <div class="space-y-4 text-lg">
@@ -250,7 +253,7 @@
 </div>
 </main>
 <footer class="bg-primary text-white pt-24 pb-12 px-4 lg:px-40">
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 border-b border-white/10 pb-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 border-b border-white/10 pb-16">
 <div class="flex flex-col gap-8">
 <div class="flex items-center gap-3">
 <div class="size-10 flex items-center justify-center bg-white rounded-xl text-primary">
