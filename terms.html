@@ -1,267 +1,343 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - Duka Mkononi</title>
-    <meta name="description" content="Terms and Conditions for Duka Mkononi shop management application">
-    <link rel="stylesheet" href="css/styles.css">
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Terms and Conditions - Duka Mkononi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#065808",
+                        "gold": "#ffc107",
+                        "background-light": "#f8faf8",
+                    },
+                    fontFamily: {
+                        "sans": ["Poppins", "sans-serif"],
+                        "display": ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { @apply font-sans antialiased text-slate-900 bg-background-light; }
+        }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        @media print {
+            .no-print { display: none !important; }
+            .print-full-width { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
+        }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">🏪</div>
-                <span>Duka Mkononi</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li class="lang-switcher">
-                        <a href="terms.html" class="active">ENG</a>
-                        <a href="terms-sw.html">SW</a>
-                    </li>
-                    <li><a href="index.html#download" class="cta-button">Start 14 Days Free</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <p class="breadcrumb">HOME / TERMS & CONDITIONS</p>
-            <h1 class="page-title">Terms & Conditions</h1>
-            <p class="last-updated">📅 Last updated: January 2024</p>
-        </div>
-    </section>
-
-    <!-- Content -->
-    <section style="padding: 4rem 0;">
-        <div class="container">
-            <div class="content-layout">
-                <!-- Sidebar -->
-                <aside class="sidebar">
-                    <h3>Contents</h3>
-                    <ul class="sidebar-nav">
-                        <li><a href="#introduction" class="active">1. Introduction</a></li>
-                        <li><a href="#account">2. Using the Account</a></li>
-                        <li><a href="#program">3. Use of Program</a></li>
-                        <li><a href="#pricing">4. Pricing and Payments</a></li>
-                        <li><a href="#trial">5. Free Trial Period</a></li>
-                        <li><a href="#content">6. Content and Updates</a></li>
-                        <li><a href="#termination">7. Termination</a></li>
-                    </ul>
-                </aside>
-
-                <!-- Main Content -->
-                <main class="main-content">
-                    <!-- Section 1 -->
-                    <div id="introduction" class="content-section">
-                        <h2>
-                            <span class="section-number">1</span>
-                            Introduction
-                        </h2>
-                        <p>Welcome to the <strong>Duka Mkononi</strong> Terms & Conditions. These terms govern your use of our service aimed at helping small and medium-sized businesses manage their inventory, sales and customers efficiently. When we say "we", "us" or "our", we mean the Duka Mkononi team.</p>
-                        <p>By using our service, you agree to the collection and use of information in accordance with our Terms. We will not share your information with anyone except as described in this Terms of Service.</p>
-                        <p>These terms are legally binding. By using our service, you agree to these terms. If you do not agree with any part of these terms, please do not use our service.</p>
-                    </div>
-
-                    <!-- Section 2 -->
-                    <div id="account" class="content-section">
-                        <h2>
-                            <span class="section-number">2</span>
-                            Using the Account
-                        </h2>
-                        <p>To use our service, you must create an account. You agree to:</p>
-                        <ul style="list-style: none; padding-left: 1.5rem;">
-                            <li style="margin-bottom: 0.5rem;">🔹 To provide true information about yourself, from your mobile phone number to email address.</li>
-                            <li style="margin-bottom: 0.5rem;">🔹 To use proper authentication procedures and keep it out of the hands of anyone who should not see it.</li>
-                            <li style="margin-bottom: 0.5rem;">🔹 To notify us if you suspect anything has been done that is fraudulent or unauthorized using your account.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Section 3 -->
-                    <div id="program" class="content-section">
-                        <h2>
-                            <span class="section-number">3</span>
-                            Use of Program
-                        </h2>
-                        <p>You may use Duka Mkononi to manage your business legally:</p>
-
-                        <div style="margin: 2rem 0;">
-                            <div class="info-card" style="margin-bottom: 1rem;">
-                                <h4>🔹 You should not use this system to do anything illegal</h4>
-                                <p>You must not upload or share information that you know is illegal, false or violates the rights of others (such as malicious software or unauthorized content).</p>
-                            </div>
-                            <div class="info-card" style="margin-bottom: 1rem;">
-                                <h4>🔹 You must not try to damage or harm other people's property</h4>
-                                <p>Do not try to hack into this system, insert malicious software, interfere with the operation of the programs, send viruses or do anything that can damage the programs or other users.</p>
-                            </div>
-                            <div class="info-card" style="margin-bottom: 1rem;">
-                                <h4>🔹 Duka Mkononi does not have the right to publish content you add or sell to others</h4>
-                                <p>Content in your shop (product names, prices, transaction records) belongs to you. We don't sell it to anyone or use it commercially for others.</p>
-                            </div>
+<body class="min-h-screen flex flex-col">
+<header class="no-print sticky top-0 z-50 w-full bg-[#065808] text-white shadow-lg">
+<div class="mx-auto flex max-w-[1280px] items-center justify-between px-6 lg:px-12 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 text-white flex items-center justify-center">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V44Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-extrabold tracking-tight text-white">Duka Mkononi</h2>
+</div>
+<div class="flex items-center gap-10">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-gold transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold hover:text-gold transition-colors" href="#">Services</a>
+<a class="text-sm font-semibold hover:text-gold transition-colors" href="#">Pricing</a>
+<a class="text-sm font-semibold hover:text-gold transition-colors" href="#">About Us</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-xs font-bold tracking-widest border-r border-white/20 pr-6 mr-2">
+<a class="text-gold border-b-2 border-gold pb-0.5" href="#">ENG</a>
+<span class="text-white/20">|</span>
+<a class="text-white/50 hover:text-white transition-colors" href="#">SW</a>
+</div>
+<button class="hidden sm:flex cursor-pointer items-center justify-center rounded-full h-11 px-7 bg-[#ffc107] text-[#065808] text-sm font-bold leading-normal transition-all hover:bg-white hover:scale-105 shadow-md">
+                    Start 14-Day Free
+                </button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 px-6 lg:px-12 py-12">
+<div class="mx-auto max-w-[1200px]">
+<div class="no-print mb-8 flex items-center gap-2 text-sm">
+<a class="text-primary font-medium hover:underline" href="#">Home</a>
+<span class="text-slate-400">/</span>
+<span class="text-slate-500 font-medium">Terms and Conditions</span>
+</div>
+<div class="mb-12 flex flex-col gap-4 border-b border-slate-200 pb-10">
+<h1 class="text-4xl lg:text-5xl font-black text-primary tracking-tight">Terms and Conditions</h1>
+<div class="flex items-center gap-2 text-slate-500">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<p class="text-base font-medium">Last Updated: January 2024</p>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-16">
+<aside class="no-print lg:sticky lg:top-32 h-fit lg:w-80 flex-shrink-0">
+<div class="rounded-2xl bg-white shadow-sm border border-slate-100 p-8">
+<h3 class="mb-6 text-xs font-bold uppercase tracking-widest text-slate-400">Contents</h3>
+<nav class="flex flex-col gap-1">
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#introduction">
+<span class="material-symbols-outlined text-sm">info</span>
+<span class="text-sm">1. Introduction</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#registration">
+<span class="material-symbols-outlined text-sm">person_add</span>
+<span class="text-sm">2. Account Registration</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#usage">
+<span class="material-symbols-outlined text-sm">devices</span>
+<span class="text-sm">3. Software Usage</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#payments">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span class="text-sm">4. Payments and Subscriptions</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#trial">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-sm">5. 14-Day Free Trial</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#responsibilities">
+<span class="material-symbols-outlined text-sm">task_alt</span>
+<span class="text-sm">6. User Responsibilities</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#liability">
+<span class="material-symbols-outlined text-sm">gavel</span>
+<span class="text-sm">7. Limitation of Liability</span>
+</a>
+</nav>
+<button class="mt-8 flex w-full items-center justify-center gap-2 rounded-xl border-2 border-primary/20 py-3 text-sm font-bold text-primary hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm" onclick="window.print()">
+<span class="material-symbols-outlined text-xl">print</span>
+                        Print Copy
+                    </button>
+</div>
+</aside>
+<article class="print-full-width flex-1 max-w-3xl space-y-16 pb-24 text-slate-700 leading-relaxed">
+<section class="scroll-mt-32" id="introduction">
+<h2 class="mb-6 text-3xl font-bold text-primary">1. Introduction</h2>
+<div class="space-y-4 text-lg">
+<p>Welcome to <strong>Duka Mkononi</strong>. Our service is fully dedicated to helping small and medium-sized businesses grow by simplifying their operational systems. Our primary goal is to provide entrepreneurs with digital tools that enable them to manage inventory, sales, and reports more efficiently.</p>
+<p>By using this software, you agree to these terms and conditions. Please read them carefully to understand how we operate and how you can use our services effectively to grow your business.</p>
+</div>
+</section>
+<section class="scroll-mt-32" id="registration">
+<h2 class="mb-6 text-3xl font-bold text-primary">2. Account Registration</h2>
+<div class="space-y-4 text-lg">
+<p>Accurate registration is essential for the security of your business. When you register:</p>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>You must provide accurate, complete, and verifiable information about yourself and your business at all times during use.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>It is your sole responsibility to protect the security of your password and prevent unauthorized access to your Duka Mkononi account.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Any false or inaccurate information may result in immediate termination of service without prior notice.</span>
+</li>
+</ul>
+</div>
+</section>
+<section class="scroll-mt-32" id="usage">
+<h2 class="mb-6 text-3xl font-bold text-primary">3. Software Usage</h2>
+<div class="space-y-4 text-lg">
+<p>You agree to use Duka Mkononi for lawful business purposes only:</p>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">cloud_done</span>
+<span>You acknowledge that all your data is stored on our secure cloud systems (Cloud Storage), allowing you to access it anywhere using your devices.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">block</span>
+<span>You are strictly prohibited from attempting to interfere with, weaken, or damage the software infrastructure, servers, or networks connected to the software in any way.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">security</span>
+<span>Duka Mkononi will take strict legal action against any attempt at hacking, illegal data downloading, or misuse of the system.</span>
+</li>
+</ul>
+</div>
+</section>
+<section class="scroll-mt-32" id="payments">
+<h2 class="mb-6 text-3xl font-bold text-primary">4. Payments and Subscriptions</h2>
+<div class="space-y-8">
+<p class="text-lg">Choose a plan that fits the size of your shop. We offer the following pricing options:</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+<div class="relative group rounded-2xl border-2 border-primary/10 bg-white p-6 shadow-sm hover:border-primary/30 transition-all text-center">
+<h4 class="text-lg font-bold text-slate-900 uppercase tracking-wide">Starter</h4>
+<div class="mt-6">
+<span class="text-3xl font-black text-primary">10,000/=</span>
+<span class="text-primary/60 text-xs block mt-2 uppercase tracking-widest font-bold italic">PER MONTH</span>
+</div>
+</div>
+<div class="relative group rounded-2xl border-2 border-primary bg-primary text-white p-6 shadow-xl scale-105 z-10 text-center">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-[#065808] text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest shadow-lg">Recommended</div>
+<h4 class="text-lg font-bold uppercase tracking-wide">Professional</h4>
+<div class="mt-6">
+<span class="text-3xl font-black text-white">15,000/=</span>
+<span class="text-white/70 text-xs block mt-2 uppercase tracking-widest font-bold italic">PER MONTH</span>
+</div>
+</div>
+<div class="relative group rounded-2xl border-2 border-primary/10 bg-white p-6 shadow-sm hover:border-primary/30 transition-all text-center">
+<h4 class="text-lg font-bold text-slate-900 uppercase tracking-wide">Enterprise</h4>
+<div class="mt-6">
+<span class="text-3xl font-black text-primary">45,000/=</span>
+<span class="text-primary/60 text-xs block mt-2 uppercase tracking-widest font-bold italic">PER MONTH</span>
+</div>
+</div>
+</div>
+<div class="p-5 bg-red-50 border-l-4 border-red-500 rounded-r-xl mt-8">
+<p class="text-sm text-red-800 font-semibold flex items-start gap-3">
+<span class="material-symbols-outlined">warning</span>
+<span>NOTE: Failure to pay for your subscription on time will result in the suspension of all software services until payment is made. Your data will not be deleted immediately, but you will not be able to access it.</span>
+</p>
+</div>
+</div>
+</section>
+<section class="scroll-mt-32" id="trial">
+<h2 class="mb-6 text-3xl font-bold text-primary">5. 14-Day Free Trial</h2>
+<div class="space-y-6">
+<div class="flex gap-5 items-start p-6 bg-white rounded-2xl border-2 border-gold/30 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gold/5 rounded-full -mr-12 -mt-12"></div>
+<span class="material-symbols-outlined text-gold text-4xl mt-1">verified</span>
+<div class="space-y-2 relative z-10">
+<h5 class="font-bold text-slate-900 text-lg">Risk Free</h5>
+<p class="text-slate-600">
+                                    We give you the opportunity to try all our services for free for <strong>14 days</strong>. You can enter data, generate reports, and see if the system works for you without paying a single cent.
+                                </p>
+</div>
+</div>
+<p class="text-lg">After this period expires, you will be required to choose a paid plan to continue using the system. All the data you entered will remain available as soon as you pay.</p>
+</div>
+</section>
+<section class="scroll-mt-32" id="responsibilities">
+<h2 class="mb-6 text-3xl font-bold text-primary">6. User Responsibilities</h2>
+<div class="space-y-6 text-lg">
+<p>As a user of Duka Mkononi, you are responsible for the following:</p>
+<div class="grid gap-4">
+<div class="flex gap-4 p-4 rounded-xl border border-slate-100 bg-white">
+<span class="material-symbols-outlined text-primary bg-primary/10 rounded-lg p-2 h-fit">fact_check</span>
+<span>Ensuring every product, price, and sale you enter is accurate to obtain truthful reports for your business benefit.</span>
+</div>
+<div class="flex gap-4 p-4 rounded-xl border border-slate-100 bg-white">
+<span class="material-symbols-outlined text-primary bg-primary/10 rounded-lg p-2 h-fit">balance</span>
+<span>Following all Tanzanian tax laws and business regulations; the software is only a tool to help you manage, not a substitute for legal compliance.</span>
+</div>
+<div class="flex gap-4 p-4 rounded-xl border border-slate-100 bg-white">
+<span class="material-symbols-outlined text-primary bg-primary/10 rounded-lg p-2 h-fit">no_accounts</span>
+<span>Not using the system for illegal activities, money laundering, or selling products prohibited by law in Tanzania.</span>
+</div>
+</div>
+</div>
+</section>
+<section class="scroll-mt-32" id="liability">
+<h2 class="mb-6 text-3xl font-bold text-primary">7. Limitation of Liability</h2>
+<div class="space-y-6 text-lg">
+<p>While we strive to provide the best service 24 hours a day, you should understand that:</p>
+<div class="bg-slate-900 text-slate-300 p-8 rounded-2xl shadow-inner italic border-l-8 border-primary leading-relaxed">
+                            "Duka Mkononi and its operators shall not be liable for any direct, indirect, incidental, or consequential loss resulting from your use of the software. This includes, but is not limited to, loss of profits, data, or business reputation. The system is provided 'as is' and 'as available' without any express or implied warranty regarding its completely error-free performance."
                         </div>
-                    </div>
+<p>We reserve the right to make changes to these terms at any time. We will communicate with you via email or within the app when major changes occur to ensure you continue to receive quality service.</p>
+</div>
+</section>
+</article>
+</div>
+</div>
+</main>
+<footer class="no-print mt-auto bg-[#065808] text-white pt-20 pb-10 px-6 lg:px-12">
+<div class="mx-auto max-w-[1280px]">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="size-8 text-gold">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-bold tracking-tight">Duka Mkononi</h2>
+</div>
+<p class="text-white/70 text-sm leading-relaxed">The number one system in Tanzania for digital business management, inventory, and sales. We help your business grow.</p>
+<div class="space-y-3">
+<div class="flex items-start gap-3 text-white/80">
+<span class="material-symbols-outlined text-gold shrink-0">location_on</span>
+<span class="text-sm">Kimara mwisho, Dar es Salaam, Tanzania</span>
+</div>
+<div class="flex items-center gap-3 text-white/80">
+<span class="material-symbols-outlined text-gold shrink-0">call</span>
+<span class="text-sm">Phone: +255687168637</span>
+</div>
+<div class="flex items-center gap-3 text-white/80">
+<span class="material-symbols-outlined text-gold shrink-0">mail</span>
+<span class="text-sm">Email: chingalo-family@gmal.com</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-gold">Quick Links</h4>
+<ul class="space-y-4 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Pricing</a></li>
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-gold">Support</h4>
+<ul class="space-y-4 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">User Guide</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-gold">Legal</h4>
+<ul class="space-y-4 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-white font-bold" href="#">Terms and Conditions</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold text-gold uppercase tracking-widest text-center md:text-left">Follow Us</h4>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-[#065808] transition-all" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-[#065808] transition-all" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold text-gold uppercase tracking-widest text-center md:text-left">Download App</h4>
+<div class="flex gap-4">
+<div class="h-10 w-28 bg-white/10 rounded-md border border-white/20 flex items-center justify-center text-[10px] font-bold cursor-pointer hover:bg-white/20 transition-all uppercase">App Store</div>
+<div class="h-10 w-28 bg-white/10 rounded-md border border-white/20 flex items-center justify-center text-[10px] font-bold cursor-pointer hover:bg-white/20 transition-all uppercase">Play Store</div>
+</div>
+</div>
+</div>
+<div class="pt-10 mt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40 font-medium">
+<p>© 2024 Duka Mkononi Solutions. All rights reserved.</p>
+<div class="flex gap-8">
+<span>Made in Tanzania 🇹🇿</span>
+<span>Version 2.4.1</span>
+</div>
+</div>
+</div>
+</footer>
 
-                    <!-- Section 4 -->
-                    <div id="pricing" class="content-section">
-                        <h2>
-                            <span class="section-number">4</span>
-                            Pricing and Payments
-                        </h2>
-                        <p>Duka Mkononi uses a monthly subscription system. The fee depends on the package you have chosen:</p>
-
-                        <div style="margin: 2rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-                            <div style="background-color: var(--background-light); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">STARTER</h3>
-                                <p style="font-size: 2rem; font-weight: bold; color: var(--primary-green); margin: 0.5rem 0;">10,000/=</p>
-                                <p style="color: var(--text-light); font-size: 0.9rem;">Per Month</p>
-                            </div>
-                            <div style="background-color: var(--primary-green); color: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <h3 style="margin-bottom: 0.5rem;">PROFESSIONAL</h3>
-                                <p style="font-size: 2rem; font-weight: bold; margin: 0.5rem 0;">15,000/=</p>
-                                <p style="opacity: 0.9; font-size: 0.9rem;">Per Month</p>
-                            </div>
-                            <div style="background-color: var(--background-light); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">ENTERPRISE</h3>
-                                <p style="font-size: 2rem; font-weight: bold; color: var(--primary-green); margin: 0.5rem 0;">45,000/=</p>
-                                <p style="color: var(--text-light); font-size: 0.9rem;">Per Month</p>
-                            </div>
-                        </div>
-
-                        <div class="warning-box">
-                            <p><strong>⚠️ IMPORTANT:</strong> If you do not pay for the selected package within 3 days of being notified by SMS, WhatsApp, email or through the Duka Mkononi program, it will be used monthly. Your account will not be deleted but will be locked until the payment is completed 100%.</p>
-                        </div>
-                    </div>
-
-                    <!-- Section 5 -->
-                    <div id="trial" class="content-section">
-                        <h2>
-                            <span class="section-number">5</span>
-                            Free Trial Period (14 Days)
-                        </h2>
-
-                        <div class="info-card" style="margin-bottom: 1.5rem;">
-                            <h4>🎁 What Does This Trial Include (14 Days Free)?</h4>
-                            <p>You can use all the features of Duka Mkononi to the fullest without giving us money and see if our program meets your business needs or not. During this period, you will have all the features of the professional package at no cost until the 14 days expire.</p>
-                        </div>
-
-                        <p>Once the 14 days are over, if you wish to continue, choose the package that suits you and pay the fee. If you don't choose and don't pay:</p>
-                        <ul style="list-style: none; padding-left: 1.5rem; margin-top: 1rem;">
-                            <li style="margin-bottom: 0.5rem;">• Your account will be closed, but your data will be stored for a total of 90 days.</li>
-                            <li style="margin-bottom: 0.5rem;">• After 90 days, the data and all your information will be permanently deleted without the option to restore it.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Section 6 -->
-                    <div id="content" class="content-section">
-                        <h2>
-                            <span class="section-number">6</span>
-                            Content and Updates
-                        </h2>
-
-                        <div class="info-card" style="margin-bottom: 1.5rem;">
-                            <h4>🔄 Ownership of What Is Loaded and Stored</h4>
-                            <p>All information you put in Duka Mkononi (product information, customer data, sales data) belongs to you. We can't sell it or share it commercially without your permission.</p>
-                        </div>
-
-                        <div class="info-card" style="margin-bottom: 1.5rem;">
-                            <h4>🛠️ Systems and Updates Without Notice</h4>
-                            <p>We may update the program to improve features or fix bugs and maintain services. If we make big changes, we will notify you through the program.</p>
-                        </div>
-                    </div>
-
-                    <!-- Section 7 -->
-                    <div id="termination" class="content-section">
-                        <h2>
-                            <span class="section-number">7</span>
-                            Termination
-                        </h2>
-
-                        <div class="highlight-box">
-                            <h3>❌ When Can We Deny You Access?</h3>
-                            <p>Duka Mkononi may temporarily lock or close your account if we find it violates our terms (for example, if you do bad things to hurt others), you make fraud, or do anything illegal using our account. If we do this, we will contact you to fix the problem before you finalize the decision to close the program permanently.</p>
-                            <p>If you want to close your account yourself, you can do it from the settings of your account or send a message to this email: chingalo.family@gmail.com. Remember that once the account is closed, your access to the program will end and the data will be saved for 90 days, then deleted fully.</p>
-                        </div>
-
-                        <div class="contact-info-box" style="margin-top: 3rem;">
-                            <h3>Contact Information</h3>
-                            <div class="contact-methods">
-                                <div class="contact-method">
-                                    <div class="contact-icon">✉️</div>
-                                    <p><strong>Email</strong></p>
-                                    <p>chingalo.family@gmail.com</p>
-                                </div>
-                                <div class="contact-method">
-                                    <div class="contact-icon">📞</div>
-                                    <p><strong>Phone</strong></p>
-                                    <p>+255 687 188 937</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>
-                        <div class="logo-icon" style="display: inline-block; margin-right: 0.5rem;">📦</div>
-                        Duka Mkononi
-                    </h3>
-                    <p>The best solution for managing your shop wherever you are. Simplify your sales, inventory, and reports today.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                        <li><a href="index.html#download">Download</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Help</h4>
-                    <ul>
-                        <li><a href="index.html#about">FAQs</a></li>
-                        <li><a href="index.html#contact">Contact Us</a></li>
-                        <li><a href="#">User Guide</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms and Conditions</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2024 Duka Mkononi. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
-                </div>
-            </div>
-            <div class="social-links" style="margin-top: 1rem;">
-                <a href="#" class="social-icon">📘</a>
-                <a href="#" class="social-icon">📸</a>
-                <a href="#" class="social-icon">🐦</a>
-            </div>
-        </div>
-    </footer>
-
-    <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        ↑
-    </div>
-</body>
-</html>
+</body></html>

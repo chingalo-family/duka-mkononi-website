@@ -1,234 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Duka Mkononi</title>
-    <meta name="description" content="Privacy Policy for Duka Mkononi shop management application">
-    <link rel="stylesheet" href="css/styles.css">
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Privacy Policy - Duka Mkononi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#065808",
+                        "accent": "#ffc107",
+                        "text-dark": "#111811",
+                        "background-light": "#f8faf8",
+                    },
+                    fontFamily: {
+                        "sans": ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-sans text-text-dark bg-background-light antialiased;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scroll-mt-header {
+            scroll-margin-top: 100px;
+        }
+    </style>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">🏪</div>
-                <span>Duka Mkononi</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li class="lang-switcher">
-                        <a href="privacy.html" class="active">ENG</a>
-                        <a href="privacy-sw.html">SW</a>
-                    </li>
-                    <li><a href="index.html#download" class="cta-button">Start 14 Days Free</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body class="min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 w-full bg-[#065808] text-white shadow-lg">
+<div class="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="text-white size-8">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V44Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-white">Duka Mkononi</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white hover:text-accent transition-colors text-sm font-medium" href="#">Home</a>
+<a class="text-white hover:text-accent transition-colors text-sm font-medium" href="#">Features</a>
+<a class="text-white hover:text-accent transition-colors text-sm font-medium" href="#">Pricing</a>
+<a class="text-white hover:text-accent transition-colors text-sm font-medium" href="#">About Us</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="flex items-center bg-black/20 rounded-full p-1 text-[10px] font-bold">
+<button class="px-3 py-1 rounded-full bg-accent text-black shadow-sm">ENG</button>
+<button class="px-3 py-1 rounded-full text-white/60 hover:text-white transition-colors">SW</button>
+</div>
+<button class="bg-[#ffc107] text-black px-6 py-2.5 rounded-full text-sm font-bold shadow-md hover:brightness-110 active:scale-95 transition-all">
+                Start 14 Days Free
+            </button>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1280px] mx-auto px-6 py-12">
+<div class="flex flex-col lg:flex-row gap-12">
+<aside class="w-full lg:w-72 flex-shrink-0">
+<div class="sticky top-28 flex flex-col gap-6 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+<div>
+<h3 class="text-primary text-lg font-bold">Contents</h3>
+<div class="h-1 w-10 bg-accent mt-1 rounded-full"></div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/5 text-primary border-r-4 border-primary font-semibold transition-all" href="#general-overview">
+<span class="material-symbols-outlined text-xl">info</span>
+<span class="text-sm">1. General Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#information-we-collect">
+<span class="material-symbols-outlined text-xl">person</span>
+<span class="text-sm font-medium">2. Information We Collect</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#how-we-use">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="text-sm font-medium">3. How We Use Info</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#data-security">
+<span class="material-symbols-outlined text-xl">shield</span>
+<span class="text-sm font-medium">4. Data Security</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-gray-50 hover:text-primary transition-all" href="#your-rights">
+<span class="material-symbols-outlined text-xl">mail</span>
+<span class="text-sm font-medium">5. Communication/Rights</span>
+</a>
+</nav>
+</div>
+</aside>
+<div class="flex-1 max-w-[840px]">
+<div class="mb-10">
+<nav class="flex items-center gap-2 text-primary/60 text-xs font-semibold uppercase tracking-widest mb-4">
+<a class="hover:text-primary" href="#">Home</a>
+<span>/</span>
+<span class="text-primary">Privacy Policy</span>
+</nav>
+<h1 class="text-primary text-4xl lg:text-5xl font-extrabold leading-tight mb-4">Privacy Policy</h1>
+<div class="flex items-center gap-2 bg-accent/10 w-fit px-4 py-1.5 rounded-full border border-accent/20">
+<span class="material-symbols-outlined text-accent text-sm">history</span>
+<p class="text-primary font-semibold text-sm">Last updated: January 15, 2024</p>
+</div>
+</div>
+<div class="prose prose-green max-w-none mb-12">
+<p class="text-lg text-gray-600 leading-relaxed">
+                    Welcome to the <strong class="text-primary">Duka Mkononi</strong> Privacy Policy. We value your privacy and are committed to protecting your personal information. This policy explains how we collect, use, and safeguard your data when you use our shop management services via our web and mobile applications.
+                </p>
+</div>
+<div class="space-y-16">
+<section class="scroll-mt-header" id="general-overview">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-12 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-xl">1</div>
+<h2 class="text-primary text-2xl font-bold">General Overview</h2>
+</div>
+<div class="space-y-4 text-gray-600 leading-relaxed">
+<p>Duka Mkononi is a service aimed at helping small and medium-sized businesses manage their inventory, sales, and customers efficiently. When we say "we", "us", or "our", we mean the Duka Mkononi team.</p>
+<p>By using our service, you agree to the collection and use of information in accordance with this policy. We will not share your information with anyone except as described in this Privacy Policy.</p>
+</div>
+</section>
+<section class="scroll-mt-header" id="information-we-collect">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-12 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-xl">2</div>
+<h2 class="text-primary text-2xl font-bold">Information We Collect</h2>
+</div>
+<p class="text-gray-600 mb-8 leading-relaxed">To provide the best service, we collect various types of information through our secure systems:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:border-accent transition-colors group">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined text-accent group-hover:scale-110 transition-transform">account_circle</span>
+<h3 class="font-bold text-lg">Personal Information</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> Full name and email address</li>
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> Phone number for communication</li>
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> Account authentication details</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:border-accent transition-colors group">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined text-accent group-hover:scale-110 transition-transform">store</span>
+<h3 class="font-bold text-lg">Shop Information</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> Business name and location</li>
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> Product lists and pricing</li>
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> Sales and expense records</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:border-accent transition-colors group">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined text-accent group-hover:scale-110 transition-transform">devices</span>
+<h3 class="font-bold text-lg">Technical Information</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> IP address and browser type</li>
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> System usage statistics</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:border-accent transition-colors group">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined text-accent group-hover:scale-110 transition-transform">payments</span>
+<h3 class="font-bold text-lg">Payment Information</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> Subscription package history</li>
+<li class="flex items-center gap-3 text-sm text-gray-600"><div class="size-1.5 rounded-full bg-accent"></div> Transaction records for fees</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="scroll-mt-header" id="how-we-use">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-12 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-xl">3</div>
+<h2 class="text-primary text-2xl font-bold">How We Use Your Information</h2>
+</div>
+<div class="space-y-4">
+<div class="flex gap-5 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
+<div class="text-accent bg-primary/5 p-3 rounded-full h-fit"><span class="material-symbols-outlined">check_circle</span></div>
+<div>
+<p class="font-bold text-primary">Providing and Maintaining Service</p>
+<p class="text-sm text-gray-500 mt-1">Ensuring your account is active and your shop is managed effectively and securely at all times.</p>
+</div>
+</div>
+<div class="flex gap-5 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
+<div class="text-accent bg-primary/5 p-3 rounded-full h-fit"><span class="material-symbols-outlined">trending_up</span></div>
+<div>
+<p class="font-bold text-primary">Service Improvements and Analysis</p>
+<p class="text-sm text-gray-500 mt-1">Analyzing data to understand how users interact with the app and making it easier for every merchant.</p>
+</div>
+</div>
+<div class="flex gap-5 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
+<div class="text-accent bg-primary/5 p-3 rounded-full h-fit"><span class="material-symbols-outlined">notifications_active</span></div>
+<div>
+<p class="font-bold text-primary">Technical Communication</p>
+<p class="text-sm text-gray-500 mt-1">Sending you important information regarding your account or any legal and technical changes to the service.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="scroll-mt-header" id="data-security">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-12 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-xl">4</div>
+<h2 class="text-primary text-2xl font-bold">Data Security</h2>
+</div>
+<div class="bg-primary text-white p-8 rounded-3xl relative overflow-hidden shadow-xl">
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[160px]">lock</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-accent text-3xl">verified_user</span>
+<h4 class="text-xl font-bold">High-Level Security</h4>
+</div>
+<p class="leading-relaxed mb-4 text-white/90">
+                                Your information security is our number one priority. We use modern encryption technology (End-to-end Encryption) to protect your data against unauthorized access at all times.
+                            </p>
+<p class="leading-relaxed text-white/90">
+                                We strive to use commercially acceptable means to protect your Personal Information, however, remember that no method of transmission over the internet is 100% secure.
+                            </p>
+</div>
+</div>
+</section>
+<section class="scroll-mt-header pb-20" id="your-rights">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-12 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-xl">5</div>
+<h2 class="text-primary text-2xl font-bold">Communication and Your Rights</h2>
+</div>
+<div class="bg-white p-10 rounded-3xl border-2 border-primary/5 shadow-sm">
+<div class="prose text-gray-600 mb-10">
+<p>You have the right to access, edit, or delete your personal information at any time through your account settings. If you need further assistance or have questions about your privacy, contact us:</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16">
+<a class="flex flex-col items-center gap-3 group" href="mailto:chingalo-family@gmail.com">
+<div class="size-16 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-inner">
+<span class="material-symbols-outlined text-2xl">email</span>
+</div>
+<span class="font-bold text-sm">chingalo-family@gmail.com</span>
+</a>
+<div class="w-px h-16 bg-gray-200 hidden md:block self-center"></div>
+<a class="flex flex-col items-center gap-3 group" href="tel:+255687168637">
+<div class="size-16 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-inner">
+<span class="material-symbols-outlined text-2xl">call</span>
+</div>
+<span class="font-bold text-sm">+255 687 168 637</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-[#065808] text-white pt-16 pb-8 px-6">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="text-white size-8">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-white">Duka Mkononi</h2>
+</div>
+<p class="text-white/70 text-sm leading-relaxed mb-6">
+                    The best solution for managing your shop wherever you are. Simplify your sales, inventory, and reports today.
+                </p>
+<div class="space-y-3">
+<div class="flex items-start gap-3 text-sm text-white/80">
+<span class="material-symbols-outlined text-accent text-sm mt-0.5">location_on</span>
+<span>Kimara Mwisho, Dar es Salaam, Tanzania</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-white/80">
+<span class="material-symbols-outlined text-accent text-sm">call</span>
+<span>Phone: +255 687 168 637</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-white/80">
+<span class="material-symbols-outlined text-accent text-sm">email</span>
+<span>Email: chingalo-family@gmail.com</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-accent font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 text-sm text-white/80">
+<li><a class="hover:text-accent transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Features</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Pricing</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">About Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-accent font-bold mb-6">Help</h4>
+<ul class="space-y-4 text-sm text-white/80">
+<li><a class="hover:text-accent transition-colors" href="#">FAQs</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">User Guide</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-accent font-bold mb-6">Legal</h4>
+<ul class="space-y-4 text-sm text-white/80">
+<li><a class="text-accent font-bold underline" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Terms and Conditions</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-4">
+<p class="text-white/50 text-xs">© 2024 Duka Mkononi. All rights reserved.</p>
+<div class="flex gap-4">
+<img alt="Google Play Store" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAzkQ_4wDr9_fOj_UxW5WzrxKOy3TIBWLOJQnNcJXnHqtpbSTy1alF4YhnNyk_4R-OZmk68LFO5ELj7Pac4Lea4Wltj_YXl7-JS6yAHUKHZdpUGSMLZ5Jh_aj2dK077Iy9Ey8gSN_g2vfNZU-f5wL41a2dNxObuowA6h6XMtNkG3NifDsxkp1Gi2wdAI0lAHaW6vZj9VAMxxNWo9sga89hW_1Nh_hw3kczsa5JTMaTuUPXbZR04wQb1kp_8PzBn5rFHX5PRoJ23WFL"/>
+<img alt="App Store" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsn6PENM9ZedoKXdruCiKdoozrU4ayB0VbELc5L7MdDttLbw6tzLYdgGEkhgrjp_PCxqaBRU62B1_rHlMmoiK3PPT80EveTsE2FbqIAimksT4L3jr6nxIym9rdv1hKAMP0iOo6OvWQbv5-DUWh0oYNwVOWZefpOVhfLDWesFe6dkJWghOVapQhaF4h9q8p2LJQ-rSTeH33Ft30EcK5gNnyoG1dWoVm2FZC5N0HW6VKvMihwwmiBPw449YJpCXeBL9W7194OSinmXoR"/>
+</div>
+</div>
+<div class="flex gap-6">
+<a class="text-white/50 hover:text-accent transition-colors" href="#"><span class="material-symbols-outlined text-2xl">social_leaderboard</span></a>
+<a class="text-white/50 hover:text-accent transition-colors" href="#"><span class="material-symbols-outlined text-2xl">language</span></a>
+<a class="text-white/50 hover:text-accent transition-colors" href="#"><span class="material-symbols-outlined text-2xl">public</span></a>
+</div>
+</div>
+</div>
+</footer>
+<button class="fixed bottom-8 right-8 size-14 bg-accent text-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 z-50" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined font-bold">arrow_upward</span>
+</button>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <p class="breadcrumb">HOME / PRIVACY POLICY</p>
-            <h1 class="page-title">Privacy Policy</h1>
-            <p class="last-updated">📅 Last updated: January 19, 2024</p>
-        </div>
-    </section>
-
-    <!-- Content -->
-    <section style="padding: 4rem 0;">
-        <div class="container">
-            <div class="content-layout">
-                <!-- Sidebar -->
-                <aside class="sidebar">
-                    <h3>Contents</h3>
-                    <ul class="sidebar-nav">
-                        <li><a href="#overview" class="active">1. General Overview</a></li>
-                        <li><a href="#information">2. Information We Collect</a></li>
-                        <li><a href="#use">3. How We Use Info</a></li>
-                        <li><a href="#security">4. Data Security</a></li>
-                        <li><a href="#rights">5. Communication/Rights</a></li>
-                    </ul>
-                </aside>
-
-                <!-- Main Content -->
-                <main class="main-content">
-                    <p style="margin-bottom: 2rem;">Welcome to the <strong>Duka Mkononi</strong> Privacy Policy. We value your privacy and are committed to protecting your personal information. This policy explains how we collect, use, and safeguard your data when you use our shop management services via our web and mobile applications.</p>
-
-                    <!-- Section 1 -->
-                    <div id="overview" class="content-section">
-                        <h2>
-                            <span class="section-number">1</span>
-                            General Overview
-                        </h2>
-                        <p>Duka Mkononi is a service aimed at helping small and medium-sized businesses manage their inventory, sales, and customers efficiently. When we say "we", "us", or "our", we mean the Duka Mkononi team.</p>
-                        <p>By using our service, you agree to the collection and use of information in accordance with this policy. We will not share your information with anyone except as described in this Privacy Policy.</p>
-                    </div>
-
-                    <!-- Section 2 -->
-                    <div id="information" class="content-section">
-                        <h2>
-                            <span class="section-number">2</span>
-                            Information We Collect
-                        </h2>
-                        <p>To provide the best service, we collect various types of information through our secure systems:</p>
-
-                        <div class="info-grid">
-                            <div class="info-card">
-                                <h4>😊 Personal Information</h4>
-                                <ul>
-                                    <li>Full name and email address</li>
-                                    <li>Phone number for communication</li>
-                                    <li>Account authentication details</li>
-                                </ul>
-                            </div>
-                            <div class="info-card">
-                                <h4>🏪 Shop Information</h4>
-                                <ul>
-                                    <li>Business name and location</li>
-                                    <li>Product lists and pricing</li>
-                                    <li>Sales and expense records</li>
-                                </ul>
-                            </div>
-                            <div class="info-card">
-                                <h4>📱 Technical Information</h4>
-                                <ul>
-                                    <li>IP address and browser type</li>
-                                    <li>System usage statistics</li>
-                                </ul>
-                            </div>
-                            <div class="info-card">
-                                <h4>💳 Payment Information</h4>
-                                <ul>
-                                    <li>Subscription package history</li>
-                                    <li>Transaction records for fees</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Section 3 -->
-                    <div id="use" class="content-section">
-                        <h2>
-                            <span class="section-number">3</span>
-                            How We Use Your Information
-                        </h2>
-
-                        <div class="info-card" style="margin-bottom: 1.5rem;">
-                            <h4>📊 Providing and Maintaining Service</h4>
-                            <p>Ensuring your account is active and your shop is managed effectively and securely at all times.</p>
-                        </div>
-
-                        <div class="info-card" style="margin-bottom: 1.5rem;">
-                            <h4>📈 Service Improvements and Analysis</h4>
-                            <p>Analyzing data to understand how users interact with the app and making it easier for every merchant.</p>
-                        </div>
-
-                        <div class="info-card" style="margin-bottom: 1.5rem;">
-                            <h4>💡 Technical Communication</h4>
-                            <p>Sending you important information regarding your account or any legal and technical changes to the service.</p>
-                        </div>
-                    </div>
-
-                    <!-- Section 4 -->
-                    <div id="security" class="content-section">
-                        <h2>
-                            <span class="section-number">4</span>
-                            Data Security
-                        </h2>
-
-                        <div class="highlight-box">
-                            <h3>🛡️ High-Level Security</h3>
-                            <p>Your information security is our number one priority. We use modern encryption technology (End-to-End Encryption) to protect your data against unauthorized access at all times.</p>
-                            <p>We strive to use commercially acceptable means to protect your Personal Information, however, remember that no method of transmission over the Internet is 100% secure.</p>
-                        </div>
-                    </div>
-
-                    <!-- Section 5 -->
-                    <div id="rights" class="content-section">
-                        <h2>
-                            <span class="section-number">5</span>
-                            Communication and Your Rights
-                        </h2>
-                        <p>You have the right to access, edit, or delete your personal information at any time through your account settings. If you need further assistance or have questions about your privacy, contact us.</p>
-
-                        <div class="contact-info-box">
-                            <h3>Contact Information</h3>
-                            <div class="contact-methods">
-                                <div class="contact-method">
-                                    <div class="contact-icon">✉️</div>
-                                    <p><strong>Email</strong></p>
-                                    <p>chingalo.family@gmail.com</p>
-                                </div>
-                                <div class="contact-method">
-                                    <div class="contact-icon">📞</div>
-                                    <p><strong>Phone</strong></p>
-                                    <p>+255 687 188 937</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>
-                        <div class="logo-icon" style="display: inline-block; margin-right: 0.5rem;">📦</div>
-                        Duka Mkononi
-                    </h3>
-                    <p>The best solution for managing your shop wherever you are. Simplify your sales, inventory, and reports today.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                        <li><a href="index.html#download">Download</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Help</h4>
-                    <ul>
-                        <li><a href="index.html#about">FAQs</a></li>
-                        <li><a href="index.html#contact">Contact Us</a></li>
-                        <li><a href="#">User Guide</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms and Conditions</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2024 Duka Mkononi. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
-                </div>
-            </div>
-            <div class="social-links" style="margin-top: 1rem;">
-                <a href="#" class="social-icon">📘</a>
-                <a href="#" class="social-icon">📸</a>
-                <a href="#" class="social-icon">🐦</a>
-            </div>
-        </div>
-    </footer>
-
-    <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        ↑
-    </div>
-</body>
-</html>
+</body></html>

@@ -1,7 +1,0 @@
-<svg width="600" height="800" xmlns="http://www.w3.org/2000/svg">
-  <rect width="600" height="800" fill="#FFF3E0"/>
-  <path d="M200 200 L250 150 L350 150 L400 200 L400 500 L350 550 L250 550 L200 500 Z" fill="#FF9800"/>
-  <rect x="240" y="300" width="120" height="150" fill="#FFB74D"/>
-  <text x="300" y="500" font-family="Arial, sans-serif" font-size="18" fill="#E65100" text-anchor="middle">Business Photo</text>
-  <text x="300" y="525" font-family="Arial, sans-serif" font-size="14" fill="#F57C00" text-anchor="middle">Replace with backpack/product</text>
-</svg>

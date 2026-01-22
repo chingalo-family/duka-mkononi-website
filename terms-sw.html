@@ -1,267 +1,343 @@
 <!DOCTYPE html>
-<html lang="sw">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vigezo na Masharti - Duka Mkononi</title>
-    <meta name="description" content="Vigezo na Masharti kwa programu ya usimamizi wa duka Duka Mkononi">
-    <link rel="stylesheet" href="css/styles.css">
+<html class="light" lang="sw"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vigezo na Masharti - Duka Mkononi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#065808",
+                        "gold": "#ffc107",
+                        "background-light": "#f8faf8",
+                    },
+                    fontFamily: {
+                        "sans": ["Poppins", "sans-serif"],
+                        "display": ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { @apply font-sans antialiased text-slate-900 bg-background-light; }
+        }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        @media print {
+            .no-print { display: none !important; }
+            .print-full-width { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
+        }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <a href="index-sw.html" class="logo">
-                <div class="logo-icon">🏪</div>
-                <span>Duka Mkononi</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index-sw.html">Nyumbani</a></li>
-                    <li><a href="index-sw.html#pricing">Bei</a></li>
-                    <li><a href="index-sw.html#about">Kuhusu Sisi</a></li>
-                    <li class="lang-switcher">
-                        <a href="terms.html">ENG</a>
-                        <a href="terms-sw.html" class="active">SW</a>
-                    </li>
-                    <li><a href="index-sw.html#download" class="cta-button">Anza Siku 14 Bure</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <p class="breadcrumb">NYUMBANI / VIGEZO NA MASHARTI</p>
-            <h1 class="page-title">Vigezo na Masharti</h1>
-            <p class="last-updated">📅 Imesasishwa mwisho: Januari 2024</p>
-        </div>
-    </section>
-
-    <!-- Content -->
-    <section style="padding: 4rem 0;">
-        <div class="container">
-            <div class="content-layout">
-                <!-- Sidebar -->
-                <aside class="sidebar">
-                    <h3>Yaliyomo</h3>
-                    <ul class="sidebar-nav">
-                        <li><a href="#introduction" class="active">1. Utangulizi</a></li>
-                        <li><a href="#account">2. Usajili wa Akaunti</a></li>
-                        <li><a href="#program">3. Matumizi ya Programu</a></li>
-                        <li><a href="#pricing">4. Malipo na Vifurushi</a></li>
-                        <li><a href="#trial">5. Kipindi cha Majaribio</a></li>
-                        <li><a href="#content">6. Maudhui na Marekebisho</a></li>
-                        <li><a href="#termination">7. Kukomesha Akaunti</a></li>
-                    </ul>
-                </aside>
-
-                <!-- Main Content -->
-                <main class="main-content">
-                    <!-- Section 1 -->
-                    <div id="introduction" class="content-section">
-                        <h2>
-                            <span class="section-number">1</span>
-                            Utangulizi
-                        </h2>
-                        <p>Karibu kwenye Vigezo na Masharti ya <strong>Duka Mkononi</strong>. Masharti haya yanasimamia matumizi yako ya huduma yetu inayolenga kusaidia biashara ndogo na za kati kusimamia hesabu zao, mauzo na wateja kwa ufanisi. Tunaposema "sisi", "yetu" au "isi", tunamaanisha timu ya Duka Mkononi.</p>
-                        <p>Kwa kutumia huduma yetu, unakubali ukusanyaji na matumizi ya taarifa kulingana na Masharti yetu. Hatutashiriki taarifa yako na yeyote ila kama ilivyoelezwa katika Vigezo hivi vya Huduma.</p>
-                        <p>Masharti haya ni ya kisheria. Kwa kutumia huduma yetu, unakubali masharti haya. Ikiwa hukubaliani na sehemu yoyote ya masharti haya, tafadhali usitumie huduma yetu.</p>
-                    </div>
-
-                    <!-- Section 2 -->
-                    <div id="account" class="content-section">
-                        <h2>
-                            <span class="section-number">2</span>
-                            Usajili wa Akaunti
-                        </h2>
-                        <p>Ili kutumia huduma yetu, lazima uunde akaunti. Unakubali:</p>
-                        <ul style="list-style: none; padding-left: 1.5rem;">
-                            <li style="margin-bottom: 0.5rem;">🔹 Kutoa taarifa za kweli kuhusu wewe mwenyewe, kutoka nambari yako ya simu hadi anwani ya barua pepe.</li>
-                            <li style="margin-bottom: 0.5rem;">🔹 Kutumia taratibu sahihi za uthibitishaji na kuizuia isiwasilize mikononi mwa yeyote ambaye haistahili kuiona.</li>
-                            <li style="margin-bottom: 0.5rem;">🔹 Kutuarifu ikiwa unadhani kunafanyika lolote la ulaghai au lisiloidhinishwa kwa kutumia akaunti yako.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Section 3 -->
-                    <div id="program" class="content-section">
-                        <h2>
-                            <span class="section-number">3</span>
-                            Matumizi ya Programu
-                        </h2>
-                        <p>Unaweza kutumia Duka Mkononi kusimamia biashara yako kisheria:</p>
-
-                        <div style="margin: 2rem 0;">
-                            <div class="info-card" style="margin-bottom: 1rem;">
-                                <h4>🔹 Hauruhusiwi kutumia mfumo huu kufanya kitu chochote kisicho halali</h4>
-                                <p>Hauruhusiwi kupakia au kushiriki taarifa ambazo unajua ni haramu, za uongo au vinavyokiuka haki za wengine (kama vile programu hasidi au maudhui yasiyo na idhini).</p>
+<body class="min-h-screen flex flex-col">
+<header class="no-print sticky top-0 z-50 w-full bg-[#065808] text-white shadow-lg">
+<div class="mx-auto flex max-w-[1280px] items-center justify-between px-6 lg:px-12 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 text-white flex items-center justify-center">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V44Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-extrabold tracking-tight text-white">Duka Mkononi</h2>
+</div>
+<div class="flex items-center gap-10">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-gold transition-colors" href="#">Nyumbani</a>
+<a class="text-sm font-semibold hover:text-gold transition-colors" href="#">Huduma</a>
+<a class="text-sm font-semibold hover:text-gold transition-colors" href="#">Bei</a>
+<a class="text-sm font-semibold hover:text-gold transition-colors" href="#">Kuhusu Sisi</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-xs font-bold tracking-widest border-r border-white/20 pr-6 mr-2">
+<a class="text-white/50 hover:text-white transition-colors" href="#">ENG</a>
+<span class="text-white/20">|</span>
+<a class="text-gold border-b-2 border-gold pb-0.5" href="#">SW</a>
+</div>
+<button class="hidden sm:flex cursor-pointer items-center justify-center rounded-full h-11 px-7 bg-[#ffc107] text-[#065808] text-sm font-bold leading-normal transition-all hover:bg-white hover:scale-105 shadow-md">
+                        Anza Siku 14 Bure
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 px-6 lg:px-12 py-12">
+<div class="mx-auto max-w-[1200px]">
+<div class="no-print mb-8 flex items-center gap-2 text-sm">
+<a class="text-primary font-medium hover:underline" href="#">Nyumbani</a>
+<span class="text-slate-400">/</span>
+<span class="text-slate-500 font-medium">Vigezo na Masharti</span>
+</div>
+<div class="mb-12 flex flex-col gap-4 border-b border-slate-200 pb-10">
+<h1 class="text-4xl lg:text-5xl font-black text-primary tracking-tight">Vigezo na Masharti</h1>
+<div class="flex items-center gap-2 text-slate-500">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<p class="text-base font-medium">Ilihaririwa mara ya mwisho: Januari 2024</p>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-16">
+<aside class="no-print lg:sticky lg:top-32 h-fit lg:w-80 flex-shrink-0">
+<div class="rounded-2xl bg-white shadow-sm border border-slate-100 p-8">
+<h3 class="mb-6 text-xs font-bold uppercase tracking-widest text-slate-400">Yaliyomo</h3>
+<nav class="flex flex-col gap-1">
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#utangulizi">
+<span class="material-symbols-outlined text-sm">info</span>
+<span class="text-sm">1. Utangulizi</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#usajili">
+<span class="material-symbols-outlined text-sm">person_add</span>
+<span class="text-sm">2. Usajili</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#matumizi">
+<span class="material-symbols-outlined text-sm">devices</span>
+<span class="text-sm">3. Matumizi</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#malipo">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span class="text-sm">4. Malipo</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#majaribio">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-sm">5. Majaribio</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#majukumu">
+<span class="material-symbols-outlined text-sm">task_alt</span>
+<span class="text-sm">6. Majukumu</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/5 hover:text-primary font-medium transition-all" href="#dhima">
+<span class="material-symbols-outlined text-sm">gavel</span>
+<span class="text-sm">7. Kikomo cha Dhima</span>
+</a>
+</nav>
+<button class="mt-8 flex w-full items-center justify-center gap-2 rounded-xl border-2 border-primary/20 py-3 text-sm font-bold text-primary hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm" onclick="window.print()">
+<span class="material-symbols-outlined text-xl">print</span>
+                            Chapisha Nakala
+                        </button>
+</div>
+</aside>
+<article class="print-full-width flex-1 max-w-3xl space-y-16 pb-24 text-slate-700 leading-relaxed">
+<section class="scroll-mt-32" id="utangulizi">
+<h2 class="mb-6 text-3xl font-bold text-primary">1. Utangulizi</h2>
+<div class="space-y-4 text-lg">
+<p>Karibu <strong>Duka Mkononi</strong>. Huduma yetu imejitolea kikamilifu kusaidia biashara ndogo na za kati kukua kwa kurahisisha mifumo yao ya uendeshaji. Lengo letu kuu ni kuwapa wajasiriamali zana za kidijitali zinazowawezesha kusimamia stoo, mauzo na ripoti kwa ufanisi zaidi.</p>
+<p>Kwa kutumia programu hii, unakubaliana na vigezo na masharti haya. Tafadhali yasome kwa makini ili kuelewa jinsi tunavyofanya kazi na jinsi unavyoweza kutumia huduma zetu kwa tija katika kukuza biashara yako.</p>
+</div>
+</section>
+<section class="scroll-mt-32" id="usajili">
+<h2 class="mb-6 text-3xl font-bold text-primary">2. Usajili wa Akaunti</h2>
+<div class="space-y-4 text-lg">
+<p>Usajili sahihi ni muhimu kwa usalama wa biashara yako. Unapojisajili:</p>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Ni lazima utoe taarifa sahihi, kamili na zinazohakikiwa kuhusu wewe na biashara yako wakati wote wa matumizi.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Ni jukumu lako pekee kulinda usalama wa neno lako la siri (password) na kuzuia ufikiaji usioidhinishwa wa akaunti yako ya Duka Mkononi.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Taarifa yoyote ya uongo au isiyo sahihi inaweza kusababisha kusitishwa kwa huduma mara moja bila kutoa taarifa ya awali.</span>
+</li>
+</ul>
+</div>
+</section>
+<section class="scroll-mt-32" id="matumizi">
+<h2 class="mb-6 text-3xl font-bold text-primary">3. Matumizi ya Programu</h2>
+<div class="space-y-4 text-lg">
+<p>Unakubali kutumia Duka Mkononi kwa madhumuni halali ya kibiashara pekee:</p>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">cloud_done</span>
+<span>Unatambua kuwa data zako zote zinahifadhiwa kwenye mifumo yetu salama ya wingu (Cloud Storage) utavyoweza kuzifikia popote pale ulipo kwa kutumia vifaa vyako.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">block</span>
+<span>Huruhusiwi kabisa kujaribu kuingilia, kudhoofisha, au kuharibu miundombinu ya programu, seva, au mitandao inayounganishwa na programu kwa njia yoyote ile.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-1">security</span>
+<span>Duka Mkononi itachukua hatua kali za kisheria dhidi ya jaribio lolote la udukuzi, upakuaji wa data kinyume na sheria, au matumizi mabaya ya mfumo.</span>
+</li>
+</ul>
+</div>
+</section>
+<section class="scroll-mt-32" id="malipo">
+<h2 class="mb-6 text-3xl font-bold text-primary">4. Malipo na Vifurushi</h2>
+<div class="space-y-8">
+<p class="text-lg">Chagua kifurushi kinachofaa ukubwa wa duka lako. Tunatoa chaguzi zifuatazo za bei:</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+<div class="relative group rounded-2xl border-2 border-primary/10 bg-white p-6 shadow-sm hover:border-primary/30 transition-all text-center">
+<h4 class="text-lg font-bold text-slate-900 uppercase tracking-wide">Starter</h4>
+<div class="mt-6">
+<span class="text-3xl font-black text-primary">10,000/=</span>
+<span class="text-primary/60 text-xs block mt-2 uppercase tracking-widest font-bold italic">KWA MWEZI</span>
+</div>
+</div>
+<div class="relative group rounded-2xl border-2 border-primary bg-primary text-white p-6 shadow-xl scale-105 z-10 text-center">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-[#065808] text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest shadow-lg">Inapendekezwa</div>
+<h4 class="text-lg font-bold uppercase tracking-wide">Professional</h4>
+<div class="mt-6">
+<span class="text-3xl font-black text-white">15,000/=</span>
+<span class="text-white/70 text-xs block mt-2 uppercase tracking-widest font-bold italic">KWA MWEZI</span>
+</div>
+</div>
+<div class="relative group rounded-2xl border-2 border-primary/10 bg-white p-6 shadow-sm hover:border-primary/30 transition-all text-center">
+<h4 class="text-lg font-bold text-slate-900 uppercase tracking-wide">Enterprise</h4>
+<div class="mt-6">
+<span class="text-3xl font-black text-primary">45,000/=</span>
+<span class="text-primary/60 text-xs block mt-2 uppercase tracking-widest font-bold italic">KWA MWEZI</span>
+</div>
+</div>
+</div>
+<div class="p-5 bg-red-50 border-l-4 border-red-500 rounded-r-xl mt-8">
+<p class="text-sm text-red-800 font-semibold flex items-start gap-3">
+<span class="material-symbols-outlined">warning</span>
+<span>TANBIHI: Kutolipia kifurushi chako kwa wakati kutasababisha kusitishwa kwa ufikiaji wa huduma zote za programu hadi malipo yatakapofanyika. Data zako hazitafutwa mara moja lakini hutaweza kuzifikia.</span>
+</p>
+</div>
+</div>
+</section>
+<section class="scroll-mt-32" id="majaribio">
+<h2 class="mb-6 text-3xl font-bold text-primary">5. Majaribio ya Siku 14</h2>
+<div class="space-y-6">
+<div class="flex gap-5 items-start p-6 bg-white rounded-2xl border-2 border-gold/30 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gold/5 rounded-full -mr-12 -mt-12"></div>
+<span class="material-symbols-outlined text-gold text-4xl mt-1">verified</span>
+<div class="space-y-2 relative z-10">
+<h5 class="font-bold text-slate-900 text-lg">Hakuna Hatari Yoyote (Risk Free)</h5>
+<p class="text-slate-600">
+                                        Tunakupa nafasi ya kujaribu huduma zetu zote bure kwa muda wa <strong>siku 14</strong>. Unaweza kuingiza data, kutengeneza ripoti, na kuona kama mfumo unakufaa bila kulipa hata senti moja.
+                                    </p>
+</div>
+</div>
+<p class="text-lg">Baada ya kipindi hiki kuisha, utahitajika kuchagua kifurushi cha malipo ili kuendelea kutumia mfumo. Data zako zote ulizoingiza zitaendelea kuwepo pindi tu utakapolipia.</p>
+</div>
+</section>
+<section class="scroll-mt-32" id="majukumu">
+<h2 class="mb-6 text-3xl font-bold text-primary">6. Majukumu ya Mtumiaji</h2>
+<div class="space-y-6 text-lg">
+<p>Kama mtumiaji wa Duka Mkononi, unawajibika kwa yafuatayo:</p>
+<div class="grid gap-4">
+<div class="flex gap-4 p-4 rounded-xl border border-slate-100 bg-white">
+<span class="material-symbols-outlined text-primary bg-primary/10 rounded-lg p-2 h-fit">fact_check</span>
+<span>Kuhakikisha kila bidhaa, bei, na mauzo unayoingiza ni sahihi ili kupata ripoti zenye ukweli kwa manufaa ya biashara yako.</span>
+</div>
+<div class="flex gap-4 p-4 rounded-xl border border-slate-100 bg-white">
+<span class="material-symbols-outlined text-primary bg-primary/10 rounded-lg p-2 h-fit">balance</span>
+<span>Kufuata sheria zote za kodi na kanuni za biashara za Tanzania; programu ni chombo cha kukusaidia tu kusimamia, siyo mbadala wa kufuata sheria.</span>
+</div>
+<div class="flex gap-4 p-4 rounded-xl border border-slate-100 bg-white">
+<span class="material-symbols-outlined text-primary bg-primary/10 rounded-lg p-2 h-fit">no_accounts</span>
+<span>Kutotumia mfumo kwa ajili ya shughuli zisizo halali, utakatishaji fedha, au uuzaji wa bidhaa zilizopigwa marufuku kisheria nchini Tanzania.</span>
+</div>
+</div>
+</div>
+</section>
+<section class="scroll-mt-32" id="dhima">
+<h2 class="mb-6 text-3xl font-bold text-primary">7. Kikomo cha Dhima</h2>
+<div class="space-y-6 text-lg">
+<p>Ingawa tunajitahidi kutoa huduma bora zaidi kwa saa 24, unapaswa kuelewa kuwa:</p>
+<div class="bg-slate-900 text-slate-300 p-8 rounded-2xl shadow-inner italic border-l-8 border-primary leading-relaxed">
+                                "Duka Mkononi na waendeshaji wake hatutawajibika kwa hasara yoyote ya moja kwa moja, isiyo ya moja kwa moja, ya bahati mbaya, au ya kufuatia inayotokana na matumizi yako ya programu. Hii ni pamoja na, lakini si tu, upotevu wa faida, data, au sifa ya biashara. Mfumo unatolewa 'kama ulivyo' na 'unavyopatikana' bila dhamana yoyote ya wazi au ya kimaana kuhusu utendaji wake usio na makosa kabisa."
                             </div>
-                            <div class="info-card" style="margin-bottom: 1rem;">
-                                <h4>🔹 Hauruhusiwi kujaribu kuharibu au kudhuru mali za watu wengine</h4>
-                                <p>Usijaribu kubomoa mfumo huu, kuingiza programu hasidi, kuingilia kazi za programu, kutuma virusi au kufanya chochote ambacho kinaweza kuharibu programu au watumiaji wengine.</p>
-                            </div>
-                            <div class="info-card" style="margin-bottom: 1rem;">
-                                <h4>🔹 Duka Mkononi haina haki ya kuchapisha maudhui unayoongeza au kuyauza kwa wengine</h4>
-                                <p>Maudhui katika duka lako (majina ya bidhaa, bei, rekodi za miamala) ni mali yako. Hatuyauzi kwa mtu yeyote au kuyatumia kibiashara kwa wengine.</p>
-                            </div>
-                        </div>
-                    </div>
+<p>Tuna haki ya kufanya mabadiliko kwenye vigezo hivi wakati wowote. Tutawasiliana nawe kupitia barua pepe au ndani ya programu mabadiliko makubwa yanapotokea ili kuhakikisha unaendelea kupata huduma bora.</p>
+</div>
+</section>
+</article>
+</div>
+</div>
+</main>
+<footer class="no-print mt-auto bg-[#065808] text-white pt-20 pb-10 px-6 lg:px-12">
+<div class="mx-auto max-w-[1280px]">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="size-8 text-gold">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-bold tracking-tight">Duka Mkononi</h2>
+</div>
+<p class="text-white/70 text-sm leading-relaxed">Mfumo namba moja Tanzania kwa usimamizi wa biashara, stoo, na mauzo kwa njia ya kidijitali. Tunasaidia biashara yako kukua.</p>
+<div class="space-y-3">
+<div class="flex items-start gap-3 text-white/80">
+<span class="material-symbols-outlined text-gold shrink-0">location_on</span>
+<span class="text-sm">Kimara mwisho, Dar es Salaam, Tanzania</span>
+</div>
+<div class="flex items-center gap-3 text-white/80">
+<span class="material-symbols-outlined text-gold shrink-0">call</span>
+<span class="text-sm">Simu: +255687168637</span>
+</div>
+<div class="flex items-center gap-3 text-white/80">
+<span class="material-symbols-outlined text-gold shrink-0">mail</span>
+<span class="text-sm">Email: chingalo-family@gmal.com</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-gold">Viungo vya Haraka</h4>
+<ul class="space-y-4 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="#">Nyumbani</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Huduma</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Bei</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Kuhusu Sisi</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-gold">Msaada</h4>
+<ul class="space-y-4 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="#">Maswali ya Mara kwa Mara</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Wasiliana Nasi</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Mwongozo wa Matumizi</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-gold">Kisheria</h4>
+<ul class="space-y-4 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="#">Sera ya Faragha</a></li>
+<li><a class="text-white font-bold" href="#">Vigezo na Masharti</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Sera ya Kurejesha Fedha</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold text-gold uppercase tracking-widest text-center md:text-left">Tufuate</h4>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-[#065808] transition-all" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="size-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-[#065808] transition-all" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold text-gold uppercase tracking-widest text-center md:text-left">Pakua App</h4>
+<div class="flex gap-4">
+<div class="h-10 w-28 bg-white/10 rounded-md border border-white/20 flex items-center justify-center text-[10px] font-bold cursor-pointer hover:bg-white/20 transition-all uppercase">App Store</div>
+<div class="h-10 w-28 bg-white/10 rounded-md border border-white/20 flex items-center justify-center text-[10px] font-bold cursor-pointer hover:bg-white/20 transition-all uppercase">Play Store</div>
+</div>
+</div>
+</div>
+<div class="pt-10 mt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40 font-medium">
+<p>© 2024 Duka Mkononi Solutions. Haki zote zimehifadhiwa.</p>
+<div class="flex gap-8">
+<span>Imetengenezwa Tanzania 🇹🇿</span>
+<span>Toleo la 2.4.1</span>
+</div>
+</div>
+</div>
+</footer>
 
-                    <!-- Section 4 -->
-                    <div id="pricing" class="content-section">
-                        <h2>
-                            <span class="section-number">4</span>
-                            Malipo na Vifurushi
-                        </h2>
-                        <p>Duka Mkononi inatumia mfumo wa usajili wa kila mwezi. Ada inategemea pakiti uliyochagua:</p>
-
-                        <div style="margin: 2rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-                            <div style="background-color: var(--background-light); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">STARTER</h3>
-                                <p style="font-size: 2rem; font-weight: bold; color: var(--primary-green); margin: 0.5rem 0;">10,000/=</p>
-                                <p style="color: var(--text-light); font-size: 0.9rem;">Kwa Mwezi</p>
-                            </div>
-                            <div style="background-color: var(--primary-green); color: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <h3 style="margin-bottom: 0.5rem;">PROFESSIONAL</h3>
-                                <p style="font-size: 2rem; font-weight: bold; margin: 0.5rem 0;">15,000/=</p>
-                                <p style="opacity: 0.9; font-size: 0.9rem;">Kwa Mwezi</p>
-                            </div>
-                            <div style="background-color: var(--background-light); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">ENTERPRISE</h3>
-                                <p style="font-size: 2rem; font-weight: bold; color: var(--primary-green); margin: 0.5rem 0;">45,000/=</p>
-                                <p style="color: var(--text-light); font-size: 0.9rem;">Kwa Mwezi</p>
-                            </div>
-                        </div>
-
-                        <div class="warning-box">
-                            <p><strong>⚠️ MUHIMU:</strong> Ikiwa hutalipa pakiti uliyochagua ndani ya siku 3 baada ya kuarifishwa kupitia SMS, WhatsApp, barua pepe au kupitia programu ya Duka Mkononi kwa matumizi ya kila mwezi. Akaunti yako haitafutwa lakini itafungiwa hadi malipo yatakamilika 100%.</p>
-                        </div>
-                    </div>
-
-                    <!-- Section 5 -->
-                    <div id="trial" class="content-section">
-                        <h2>
-                            <span class="section-number">5</span>
-                            Majaribio ya Siku 14
-                        </h2>
-
-                        <div class="info-card" style="margin-bottom: 1.5rem;">
-                            <h4>🎁 Hukuna Hatari Yoyote (Siku za 14 Bure)</h4>
-                            <p>Unaweza kutumia vipengele vyote vya Duka Mkononi kwa ukamilifu bila kutupa pesa na uone kama programu yetu inakidhi mahitaji ya biashara yako au la. Kipindi hiki, utakuwa na vipengele vyote vya pakiti ya kitaalamu bila gharama hadi siku 14 ziishe.</p>
-                        </div>
-
-                        <p>Mara siku 14 zinapoisha, kama ungependa kuendelea, chagua pakiti inayokufaa na kulipa ada. Ukishindwa kuchagua na kutolipa:</p>
-                        <ul style="list-style: none; padding-left: 1.5rem; margin-top: 1rem;">
-                            <li style="margin-bottom: 0.5rem;">• Akaunti yako itafungwa, lakini data yako itahifadhiwa kwa jumla ya siku 90.</li>
-                            <li style="margin-bottom: 0.5rem;">• Baada ya siku 90, data na taarifa zako zote zitafutwa kabisa bila chaguo la kuzirudisha.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Section 6 -->
-                    <div id="content" class="content-section">
-                        <h2>
-                            <span class="section-number">6</span>
-                            Majukumu ya Mtumiaji
-                        </h2>
-
-                        <div class="info-card" style="margin-bottom: 1.5rem;">
-                            <h4>🔄 Kumiliki kwa Kinachopakuliwa na Kuhifadhiwa</h4>
-                            <p>Taarifa zote unazoweka kwenye Duka Mkononi (taarifa za bidhaa, data za wateja, data za mauzo) ni mali yako. Hatuwezi kuzichora au kuzishiriki kibiashara bila ruhusa yako.</p>
-                        </div>
-
-                        <div class="info-card" style="margin-bottom: 1.5rem;">
-                            <h4>🛠️ Mifumo na Marekebisho bila ya Taarifa</h4>
-                            <p>Tunaweza kusasisha programu ili kuboresha vipengele au kurekebisha hitilafu na kudumisha huduma. Tukifanya mabadiliko makubwa, tutakuarifu kupitia programu.</p>
-                        </div>
-                    </div>
-
-                    <!-- Section 7 -->
-                    <div id="termination" class="content-section">
-                        <h2>
-                            <span class="section-number">7</span>
-                            Kikomo cha Dhima
-                        </h2>
-
-                        <div class="highlight-box">
-                            <h3>❌ Lini Tunaweza Kukukataa Upatikanaji?</h3>
-                            <p>Duka Mkononi inaweza kufunga kwa muda au kufunga kabisa akaunti yako ikiwa tutagundua inavunja masharti yetu (kwa mfano, ukifanya mambo mabaya ili kuwaumiza wengine), unafanya ulaghai, au kufanya lolote lisilo halali kwa kutumia akaunti yetu. Tukifanya hivyo, tutawasiliana nawe kurekebisha tatizo kabla ya kufikiria kufunga kabisa programu.</p>
-                            <p>Ikiwa unataka kufunga akaunti yako mwenyewe, unaweza kuifanya kutoka kwenye mipangilio ya akaunti yako au kutuma ujumbe kwa barua pepe hii: chingalo.family@gmail.com. Kumbuka kuwa mara akaunti inapofungwa, ufikiaji wako kwenye programu utaisha na data itahifadhiwa kwa siku 90, kisha itafutwa kabisa.</p>
-                        </div>
-
-                        <div class="contact-info-box" style="margin-top: 3rem;">
-                            <h3>Taarifa za Mawasiliano</h3>
-                            <div class="contact-methods">
-                                <div class="contact-method">
-                                    <div class="contact-icon">✉️</div>
-                                    <p><strong>Barua pepe</strong></p>
-                                    <p>chingalo.family@gmail.com</p>
-                                </div>
-                                <div class="contact-method">
-                                    <div class="contact-icon">📞</div>
-                                    <p><strong>Simu</strong></p>
-                                    <p>+255 687 188 937</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>
-                        <div class="logo-icon" style="display: inline-block; margin-right: 0.5rem;">📦</div>
-                        Duka Mkononi
-                    </h3>
-                    <p>Suluhisho bora kwa kusimamia duka lako popote ulipo. Rahisisha mauzo, hesabu, na ripoti zako leo.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Viungo vya Haraka</h4>
-                    <ul>
-                        <li><a href="index-sw.html">Nyumbani</a></li>
-                        <li><a href="index-sw.html#pricing">Bei</a></li>
-                        <li><a href="index-sw.html#download">Pakua</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Msaada</h4>
-                    <ul>
-                        <li><a href="index-sw.html#about">Maswali ya Kawaida</a></li>
-                        <li><a href="index-sw.html#contact">Wasiliana Nasi</a></li>
-                        <li><a href="#">Mwongozo wa Mtumiaji</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Kisheria</h4>
-                    <ul>
-                        <li><a href="privacy-sw.html">Sera ya Faragha</a></li>
-                        <li><a href="terms-sw.html">Vigezo na Masharti</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2024 Duka Mkononi. Haki zote zimehifadhiwa.</p>
-                <div class="footer-bottom-links">
-                    <a href="privacy-sw.html">Sera ya Faragha</a>
-                    <a href="terms-sw.html">Vigezo na Masharti</a>
-                </div>
-            </div>
-            <div class="social-links" style="margin-top: 1rem;">
-                <a href="#" class="social-icon">📘</a>
-                <a href="#" class="social-icon">📸</a>
-                <a href="#" class="social-icon">🐦</a>
-            </div>
-        </div>
-    </footer>
-
-    <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        ↑
-    </div>
-</body>
-</html>
+</body></html>
