@@ -50,7 +50,7 @@ if (contactForm) {
         e.preventDefault();
         
         const formData = new FormData(this);
-        const isSwahili = document.documentElement.lang === 'sw' || window.location.href.includes('-sw.html');
+        const isSwahili = document.documentElement.lang === 'sw' || !window.location.href.includes('-en.html');
         
         // Show loading state
         const submitButton = this.querySelector('button[type="submit"]');

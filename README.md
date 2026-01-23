@@ -11,14 +11,14 @@ Visit the website at: [https://chingalo-family.github.io/duka-mkononi-website/](
 The website includes the following pages in both English and Swahili:
 
 ### English Pages
-- **Home** - `index.html`
-- **Privacy Policy** - `privacy.html`
-- **Terms & Conditions** - `terms.html`
+- **Home** - `index-en.html`
+- **Privacy Policy** - `terms-en.html`
+- **Terms & Conditions** - `terms-en.html`
 
 ### Swahili Pages
-- **Nyumbani (Home)** - `index-sw.html`
-- **Sera ya Faragha (Privacy Policy)** - `privacy-sw.html`
-- **Vigezo na Masharti (Terms & Conditions)** - `terms-sw.html`
+- **Nyumbani (Home)** - `index.html`
+- **Sera ya Faragha (Privacy Policy)** - `privacy.html`
+- **Vigezo na Masharti (Terms & Conditions)** - `terms.html`
 
 ## 🎨 Features
 
@@ -38,7 +38,7 @@ To run the website locally:
    cd wealth-path-website
    ```
 
-2. Open `index.html` in your browser:
+2. Open `index-en.html` in your browser:
    ```bash
    # Using Python
    python -m http.server 8000
@@ -47,7 +47,7 @@ To run the website locally:
    npx http-server
    
    # Or simply open the file
-   open index.html
+   open index-en.html
    ```
 
 3. Visit `http://localhost:8000` in your browser:
