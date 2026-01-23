@@ -12,7 +12,9 @@
                 extend: {
                     colors: {
                         "primary": "#065808",
+                        "accent": "#ffc107",
                         "accent-gold": "#ffc107",
+                        "text-dark": "#111811",
                         "background-light": "#f8faf8",
                         "background-dark": "#0a1a0a",
                     },
@@ -61,10 +63,13 @@
 <a class="text-[#111811] text-sm font-semibold hover:text-primary transition-colors" href="index.html#contact">Contact</a>
 </nav>
 <div class="flex items-center gap-3">
-<a href="privacy-sw.html" class="flex cursor-pointer items-center justify-center rounded-lg h-10 px-4 border border-primary/20 bg-white text-primary text-xs font-bold hover:bg-gray-50 transition-all gap-2">
-<span class="material-symbols-outlined text-lg">language</span>
-<span><b class="text-primary font-black">ENG</b> | SW</span>
-</a>
+<div class="flex items-center gap-2 rounded-lg h-10 px-3 border border-primary/20 bg-white text-xs font-bold">
+<span class="material-symbols-outlined text-lg text-primary">language</span>
+<span class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-primary text-white">ENG</span>
+<a href="privacy-sw.html" class="px-2 py-0.5 rounded text-primary hover:bg-gray-50 transition-colors">SW</a>
+</span>
+</div>
 </div>
 </div>
 </header>
