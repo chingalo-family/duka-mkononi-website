@@ -34,8 +34,8 @@ To run the website locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/chingalo-family/wealth-path-website.git
-   cd wealth-path-website
+   git clone https://github.com/chingalo-family/duka-mkononi-website.git.git
+   cd duka-mkononi-website.git
    ```
 
 2. Open `index-en.html` in your browser:
