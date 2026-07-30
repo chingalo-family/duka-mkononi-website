@@ -1,0 +1,19 @@
+---
+description: Team-wide Cursor standards for the Duka Mkononi website
+alwaysApply: true
+---
+
+# Duka Mkononi Website Cursor Rule
+
+Static HTML marketing site (English + Swahili) for Duka Mkononi.
+
+## Required workflow before finishing
+1. Run `git status` and `git diff`; confirm only intentional files changed
+2. If shared marketing/legal content changed, update both language variants (`*-en.html` and Swahili counterparts)
+3. Update `README.md` when page set or deploy flow changes
+4. If conventions drift, update `.cursor/` in the same change set
+
+## Conventions
+- Keep EN/SW content paired
+- Do not invent product limits that contradict the mobile app
+- Prefer small, reviewable page edits
