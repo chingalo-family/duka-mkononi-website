@@ -37,26 +37,61 @@
         .trial-ribbon {
             @apply absolute top-10 -right-12 w-48 bg-accent-gold text-primary text-[8px] font-black py-1 text-center rotate-45 shadow-sm uppercase tracking-widest z-20;
         }
+        .phone-frame {
+            @apply relative mx-auto w-[220px] sm:w-[260px] rounded-[2rem] border-[10px] border-[#0a1a0a] bg-[#0a1a0a] shadow-2xl overflow-hidden;
+            aspect-ratio: 9 / 19.5;
+        }
+        .phone-frame img {
+            @apply w-full h-full object-cover object-top;
+        }
+        @keyframes float-soft {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-float-soft {
+            animation: float-soft 5s ease-in-out infinite;
+        }
+        .animate-fade-up {
+            animation: fade-up 0.7s ease-out both;
+        }
+        .animate-fade-up-delay {
+            animation: fade-up 0.7s ease-out 0.15s both;
+        }
+        .screenshot-rail {
+            scrollbar-width: thin;
+            scrollbar-color: #06580833 transparent;
+        }
+        .screenshot-rail::-webkit-scrollbar {
+            height: 6px;
+        }
+        .screenshot-rail::-webkit-scrollbar-thumb {
+            background: #06580855;
+            border-radius: 999px;
+        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#111811] dark:text-white transition-colors duration-200 overflow-x-hidden">
 <div class="flex h-auto min-h-screen w-full flex-col group/design-root">
 <div class="layout-container flex h-full grow flex-col">
-<header class="sticky top-0 z-[9999] flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md px-4 lg:px-40 py-4">
-<div class="flex items-center gap-3 text-primary dark:text-white">
+<header class="sticky top-0 z-[9999] flex flex-col border-b border-solid border-primary/10 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
+<div class="flex items-center justify-between whitespace-nowrap px-4 lg:px-40 py-4">
+<a href="index.html" class="flex items-center gap-3 text-primary dark:text-white hover:opacity-90 transition-opacity">
 <img src="assets/app-icon.png" alt="Duka Mkononi" class="size-10 rounded-xl object-cover" width="40" height="40"/>
 <h2 class="text-primary dark:text-white text-xl font-extrabold leading-tight tracking-tight">Duka Mkononi</h2>
-</div>
-<div class="flex flex-1 justify-end gap-6 items-center">
+</a>
+<div class="flex flex-1 justify-end gap-4 items-center">
 <nav class="hidden md:flex items-center gap-8">
 <a class="text-[#111811] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#huduma">Huduma</a>
-<a class="text-[#111811] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#kwanini">Kwa Nini</a>
+<a class="text-[#111811] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#kwanini">Kwanini Sisi</a>
 <a class="text-[#111811] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#bei">Bei</a>
 <a class="text-[#111811] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#kuhusu">Kuhusu Sisi</a>
 <a class="text-[#111811] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#pakua">Pakua</a>
 <a class="text-[#111811] dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#wasiliana">Wasiliana</a>
 </nav>
-<div class="flex items-center gap-3">
 <div class="flex items-center gap-2 rounded-lg h-10 px-3 border border-primary/20 bg-white text-xs font-bold">
 <span class="material-symbols-outlined text-lg text-primary">language</span>
 <span class="flex items-center gap-1">
@@ -64,8 +99,21 @@
 <span class="px-2 py-0.5 rounded bg-primary text-white">SW</span>
 </span>
 </div>
+<button id="mobileMenuButton" type="button" class="md:hidden inline-flex items-center justify-center size-10 rounded-xl border border-primary/20 text-primary" aria-expanded="false" aria-controls="mobileMenu" aria-label="Fungua menyu">
+<span id="mobileMenuIcon" class="material-symbols-outlined text-2xl">menu</span>
+</button>
 </div>
 </div>
+<nav id="mobileMenu" class="hidden md:hidden border-t border-primary/10 px-4 pb-4 pt-2 bg-white/95">
+<div class="flex flex-col gap-1">
+<a class="rounded-xl px-4 py-3 text-sm font-semibold text-[#111811] hover:bg-primary/5 hover:text-primary" href="#huduma">Huduma</a>
+<a class="rounded-xl px-4 py-3 text-sm font-semibold text-[#111811] hover:bg-primary/5 hover:text-primary" href="#kwanini">Kwanini Sisi</a>
+<a class="rounded-xl px-4 py-3 text-sm font-semibold text-[#111811] hover:bg-primary/5 hover:text-primary" href="#bei">Bei</a>
+<a class="rounded-xl px-4 py-3 text-sm font-semibold text-[#111811] hover:bg-primary/5 hover:text-primary" href="#kuhusu">Kuhusu Sisi</a>
+<a class="rounded-xl px-4 py-3 text-sm font-semibold text-[#111811] hover:bg-primary/5 hover:text-primary" href="#pakua">Pakua</a>
+<a class="rounded-xl px-4 py-3 text-sm font-semibold text-[#111811] hover:bg-primary/5 hover:text-primary" href="#wasiliana">Wasiliana</a>
+</div>
+</nav>
 </header>
 <main class="flex-1">
 <section class="relative bg-primary overflow-hidden">
@@ -73,26 +121,32 @@
 <div class="absolute top-0 left-0 w-64 h-64 bg-accent-gold rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
 <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent-gold rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
 </div>
-<div class="px-4 lg:px-40 py-24 relative z-10">
+<div class="px-4 lg:px-40 py-16 lg:py-24 relative z-10">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<div class="flex flex-col gap-8 text-left">
-<h1 class="text-white text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight">
+<div class="flex flex-col gap-6 text-left animate-fade-up">
+<div class="flex items-center gap-3">
+<img src="assets/app-icon.png" alt="" class="size-14 rounded-2xl object-cover shadow-lg ring-2 ring-white/20" width="56" height="56"/>
+<span class="text-accent-gold font-bold text-lg tracking-tight">Duka Mkononi</span>
+</div>
+<h1 class="text-white text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight">
                                 Duka Lako <br/><span class="text-accent-gold">Mkononi Mwako</span>
 </h1>
 <p class="text-white/90 text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
-                                Rahisisha usimamizi wa biashara yako, fuatilia mauzo na stoku ukiwa popote nchini Tanzania. Programu rahisi ya kukuza kipato chako.
+                                POS inayofanya kazi bila intaneti kwa maduka Tanzania — fuatilia mauzo, stock, matumizi, na ripoti kwenye simu yako, kisha sync unapopata mtandao.
                             </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-accent-gold text-primary text-lg font-black shadow-xl hover:brightness-110 hover:scale-105 transition-all">
+<div class="flex flex-wrap gap-4 pt-2">
+<a href="https://play.google.com/store/apps/details?id=chingalo.family.duka_mkononi&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-accent-gold text-primary text-lg font-black shadow-xl hover:brightness-110 hover:scale-[1.02] transition-all">
 <span class="truncate">Anza Siku 14 Bure</span>
-</button>
-<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 border-2 border-white/30 text-white text-lg font-bold hover:bg-white/10 transition-colors">
-<span class="truncate">Angalia Demo</span>
-</button>
+</a>
+<a href="#app-screens" class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 border-2 border-white/30 text-white text-lg font-bold hover:bg-white/10 transition-colors">
+<span class="truncate">Angalia Programu</span>
+</a>
 </div>
 </div>
-<div class="hidden lg:block relative">
-<img alt="Duka Mkononi Dashboard" class="rounded-2xl shadow-2xl border-8 border-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3ZLtPj_rPGGO4cDSHad9uFc_3R26s9yx_jaxqlXdnnXiY-Uxxpc4-Q86iyR9CxVDhflwwDmJFnMGY0aYwoJiYu0XKGAzqBK1m_2QwKe4PKgv_uGBMq1bMXpVthcQ2Zqd6byJvGYfERWr5qNMPPwxQiJPQcDXnJjWEsbfUdTjBBCaOJyR7z6EBwlWrC4bskvDpm-jumfaWK911F7gNogtSG2L-_oWSuX8Yq_1yOT7IqHYzJWdYDgILw06rtQMg2XuomdNFvaSh-2H"/>
+<div class="relative flex justify-center animate-fade-up-delay">
+<div class="phone-frame animate-float-soft">
+<img src="assets/hero-shop-home.webp" alt="Dashibodi ya Duka Mkononi inayoonyesha mauzo, stock, na ripoti" width="720" height="1565" loading="eager"/>
+</div>
 </div>
 </div>
 </div>
@@ -100,11 +154,12 @@
 <section class="px-4 lg:px-40 py-24 bg-white" id="huduma">
 <div class="flex flex-col gap-16">
 <div class="flex flex-col gap-4 text-center items-center">
-<span class="text-primary font-bold uppercase tracking-widest text-sm">Tunachokifanya</span>
+<span class="text-primary font-bold uppercase tracking-widest text-sm">Tunachotoa</span>
 <h2 class="text-primary dark:text-white tracking-tight text-4xl lg:text-5xl font-black leading-tight max-w-[720px]">
-                            Huduma Zetu za Kidijitali
+                            Kila kitu duka lako linahitaji
                         </h2>
 <div class="h-1.5 w-24 bg-accent-gold rounded-full"></div>
+<p class="text-gray-600 max-w-2xl text-lg">Mauzo, stock, matumizi, bidhaa, ripoti, na zaidi — kwa wamiliki wanaosimamia duka kutoka simuni.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 <div class="group flex flex-col gap-6 rounded-2xl border border-primary/5 bg-background-light p-10 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -112,9 +167,9 @@
 <span class="material-symbols-outlined text-4xl">inventory_2</span>
 </div>
 <div class="flex flex-col gap-3">
-<h3 class="text-primary text-2xl font-extrabold tracking-tight">Bidhaa Ghalani</h3>
+<h3 class="text-primary text-2xl font-extrabold tracking-tight">Stock</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                                    Simamia manunuzi na bohari kwa urahisi. Pata arifa za bidhaa zinazoisha au zinazokaribia muda wake wa mwisho.
+                                    Simamia stock in, bidhaa zilizoharibika, na arifa za stock chini ili ujue cha kuagiza kabla haijaisha.
                                 </p>
 </div>
 </div>
@@ -123,9 +178,9 @@
 <span class="material-symbols-outlined text-4xl">point_of_sale</span>
 </div>
 <div class="flex flex-col gap-3">
-<h3 class="text-primary text-2xl font-extrabold tracking-tight">Mauzo na Malipo</h3>
+<h3 class="text-primary text-2xl font-extrabold tracking-tight">Mauzo &amp; Malipo</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                                    Rekodi kila muamala wa duka lako kwa fedha taslimu, pesa za simu, uhamisho wa benki, au mkopo. Fuatilia mauzo ya kila siku na utendaji wa wafanyakazi katika maduka mengi.
+                                    Rekodi kila muamala wa duka kwa fedha taslimu, mobile money, benki, au mkopo. Fuatilia mauzo ya kila siku na utendaji wa wafanyakazi, katika maduka mengi.
                                 </p>
 </div>
 </div>
@@ -136,7 +191,7 @@
 <div class="flex flex-col gap-3">
 <h3 class="text-primary text-2xl font-extrabold tracking-tight">Matumizi</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                                    Rekodi na ainisha matumizi ya duka lako ili faida halisi ionekane, si mauzo tu.
+                                    Rekodi na ainisha kila gharama ya duka ili faida ionyeshe ulichochukua kweli, si mauzo pekee.
                                 </p>
 </div>
 </div>
@@ -147,7 +202,7 @@
 <div class="flex flex-col gap-3">
 <h3 class="text-primary text-2xl font-extrabold tracking-tight">Ripoti</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                                    Pata picha kamili ya ukuaji wa biashara yako kupitia ripoti za faida na hasara, mgawanyo wa kategoria, na bidhaa zinazouzwa zaidi.
+                                    Pata picha kamili ya ukuaji wa biashara kupitia ripoti za faida na hasara, aina za bidhaa, na bidhaa zinazouzwa zaidi.
                                 </p>
 </div>
 </div>
@@ -158,7 +213,7 @@
 <div class="flex flex-col gap-3">
 <h3 class="text-primary text-2xl font-extrabold tracking-tight">Usimamizi wa Maduka Mengi</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                                    Endesha zaidi ya duka moja kwa akaunti moja. Badilisha kati ya maduka kutoka dashibodi yako, kila duka likionesha data yake.
+                                    Simamia maduka zaidi ya moja kutoka akaunti moja. Badilisha maduka kwenye dashibodi na uone data ya kila duka peke yake.
                                 </p>
 </div>
 </div>
@@ -167,21 +222,71 @@
 <span class="material-symbols-outlined text-4xl">admin_panel_settings</span>
 </div>
 <div class="flex flex-col gap-3">
-<h3 class="text-primary text-2xl font-extrabold tracking-tight">Majukumu na Ruhusa</h3>
+<h3 class="text-primary text-2xl font-extrabold tracking-tight">Majukumu &amp; Ruhusa</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                                    Wape wafanyakazi akaunti zao na ruhusa maalum za kuona/kusimamia kwa kila sehemu, ili kila mtu aone na kufanya tu kile jukumu lake linaruhusu.
+                                    Wape wafanyakazi akaunti zao wenye ruhusa maalum za kuona/kusimamia kwa kila moduli, ili waone na wafanye tu kile jukumu lao linaruhusu.
                                 </p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="px-4 lg:px-40 py-24 bg-background-light" id="kwanini">
+<section class="px-4 lg:px-40 py-24 bg-background-light" id="app-screens">
+<div class="flex flex-col gap-12">
+<div class="flex flex-col gap-4 text-center items-center">
+<span class="text-primary font-bold uppercase tracking-widest text-sm">Ndani ya Programu</span>
+<h2 class="text-primary tracking-tight text-4xl lg:text-5xl font-black leading-tight max-w-[720px]">
+                            Imejengwa kwa kazi ya kila siku ya duka
+                        </h2>
+<div class="h-1.5 w-24 bg-accent-gold rounded-full"></div>
+<p class="text-gray-600 max-w-2xl text-lg">Skrini halisi kutoka Duka Mkononi — zana zile zile unazotumia kwenye kaunta na njiani.</p>
+</div>
+<div class="screenshot-rail flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory">
+<figure class="snap-center shrink-0 w-[200px] sm:w-[220px]">
+<div class="phone-frame !w-full !mx-0">
+<img src="assets/feature-sales.webp" alt="Skrini ya mauzo" width="720" height="1565" loading="lazy"/>
+</div>
+<figcaption class="mt-4 text-center text-primary font-bold">Mauzo</figcaption>
+</figure>
+<figure class="snap-center shrink-0 w-[200px] sm:w-[220px]">
+<div class="phone-frame !w-full !mx-0">
+<img src="assets/feature-stock.webp" alt="Skrini ya usimamizi wa stock" width="720" height="1565" loading="lazy"/>
+</div>
+<figcaption class="mt-4 text-center text-primary font-bold">Stock</figcaption>
+</figure>
+<figure class="snap-center shrink-0 w-[200px] sm:w-[220px]">
+<div class="phone-frame !w-full !mx-0">
+<img src="assets/feature-expenses.webp" alt="Skrini ya matumizi" width="720" height="1565" loading="lazy"/>
+</div>
+<figcaption class="mt-4 text-center text-primary font-bold">Matumizi</figcaption>
+</figure>
+<figure class="snap-center shrink-0 w-[200px] sm:w-[220px]">
+<div class="phone-frame !w-full !mx-0">
+<img src="assets/feature-products.webp" alt="Skrini ya orodha ya bidhaa" width="720" height="1565" loading="lazy"/>
+</div>
+<figcaption class="mt-4 text-center text-primary font-bold">Bidhaa</figcaption>
+</figure>
+<figure class="snap-center shrink-0 w-[200px] sm:w-[220px]">
+<div class="phone-frame !w-full !mx-0">
+<img src="assets/feature-reports.webp" alt="Skrini ya ripoti na faida" width="720" height="1565" loading="lazy"/>
+</div>
+<figcaption class="mt-4 text-center text-primary font-bold">Ripoti</figcaption>
+</figure>
+<figure class="snap-center shrink-0 w-[200px] sm:w-[220px]">
+<div class="phone-frame !w-full !mx-0">
+<img src="assets/feature-sync.webp" alt="Skrini ya sync ya data" width="720" height="1565" loading="lazy"/>
+</div>
+<figcaption class="mt-4 text-center text-primary font-bold">Data Sync</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="px-4 lg:px-40 py-24 bg-white" id="kwanini">
 <div class="flex flex-col gap-16">
 <div class="flex flex-col gap-4 text-center items-center">
-<span class="text-primary font-bold uppercase tracking-widest text-sm">Imetengenezwa Kwa Ajili ya Tanzania</span>
+<span class="text-primary font-bold uppercase tracking-widest text-sm">Imejengwa kwa Tanzania</span>
 <h2 class="text-primary dark:text-white tracking-tight text-4xl lg:text-5xl font-black leading-tight max-w-[720px]">
-                            Kwa Nini Duka Mkononi
+                            Kwanini Duka Mkononi
                         </h2>
 <div class="h-1.5 w-24 bg-accent-gold rounded-full"></div>
 </div>
@@ -192,7 +297,7 @@
 </div>
 <h3 class="text-primary text-xl font-extrabold tracking-tight">Inafanya Kazi Bila Mtandao</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                            Huna mtandao? Hakuna tatizo. Kila mauzo, hifadhi, na matumizi huhifadhiwa kwenye simu yako kwanza na kusawazishwa kiotomatiki mtandao unaporudi.
+                            Hakuna mtandao, hakuna shida. Rekodi mauzo, stock, na matumizi kwenye simu, kisha sync unaporudi mtandaoni.
                         </p>
 </div>
 <div class="flex flex-col gap-4 rounded-2xl bg-white p-8 border border-primary/5 shadow-sm">
@@ -201,16 +306,16 @@
 </div>
 <h3 class="text-primary text-xl font-extrabold tracking-tight">Sarafu Nyingi</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                            Weka bei na ripoti kwa Shilingi ya Tanzania kwa default, au badilisha kwenda USD, EUR, KES, GBP, au ZAR.
+                            Bei na ripoti kwa Shilingi ya Tanzania kwa default, au badilisha kwenda USD, EUR, KES, GBP, au ZAR kulingana na jinsi unavyouza.
                         </p>
 </div>
 <div class="flex flex-col gap-4 rounded-2xl bg-white p-8 border border-primary/5 shadow-sm">
 <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
 <span class="material-symbols-outlined text-3xl">translate</span>
 </div>
-<h3 class="text-primary text-xl font-extrabold tracking-tight">Kiingereza na Kiswahili</h3>
+<h3 class="text-primary text-xl font-extrabold tracking-tight">Kiingereza &amp; Kiswahili</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                            Tumia programu kwa lugha inayokufaa zaidi — badilisha kati ya Kiingereza na Kiswahili wakati wowote kwenye Mipangilio.
+                            Tumia programu kwa lugha timu yako inayofurahia — badilisha kati ya Kiingereza na Kiswahili wakati wowote kwenye Mipangilio.
                         </p>
 </div>
 <div class="flex flex-col gap-4 rounded-2xl bg-white p-8 border border-primary/5 shadow-sm">
@@ -219,63 +324,63 @@
 </div>
 <h3 class="text-primary text-xl font-extrabold tracking-tight">Daima Imesasishwa</h3>
 <p class="text-gray-600 text-base leading-relaxed">
-                            Programu hukagua matoleo mapya kiotomatiki na kukujulisha mara toleo lenye vipengele vipya au marekebisho linapopatikana.
+                            Programu huangalia matoleo mapya kiotomatiki na kukujulisha pale masasisho yenye vipengele vipya au marekebisho yako tayari.
                         </p>
 </div>
 </div>
 </div>
 </section>
-<section class="bg-background-light py-24 px-4 lg:px-40" id="bei">
+<section class="bg-white py-24 px-4 lg:px-40" id="bei">
 <div class="flex flex-col gap-16">
 <div class="flex flex-col gap-4 text-center items-center">
-<span class="text-primary font-bold uppercase tracking-widest text-sm">Gharama na Mipango</span>
+<span class="text-primary font-bold uppercase tracking-widest text-sm">Mipango &amp; Bei</span>
 <h2 class="text-primary dark:text-white tracking-tight text-4xl lg:text-5xl font-black">Mipango ya Bei</h2>
-<p class="text-gray-600 max-w-2xl text-lg">Chagua mpango unaofaa ukubwa wa biashara yako. Anza kwa kujaribu bure kwa siku 14.</p>
+<p class="text-gray-600 max-w-2xl text-lg">Chagua mpango unaofaa ukubwa wa biashara yako. Anza majaribio ya siku 14 bure leo. Sasisha kwa mobile money ndani ya programu.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="relative flex flex-col gap-8 rounded-3xl bg-white p-10 shadow-sm border border-primary/5 hover:shadow-xl transition-all overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<div class="relative flex flex-col gap-8 rounded-3xl bg-background-light p-10 border border-primary/5 hover:shadow-xl transition-all overflow-hidden">
 <div class="trial-ribbon">Siku 14 Bure</div>
 <div class="flex flex-col gap-2">
 <h3 class="text-gray-500 text-xl font-bold">Starter</h3>
 <div class="flex items-baseline gap-1 text-primary">
 <span class="text-lg font-bold">TSH</span>
 <span class="text-5xl font-black">6K</span>
-<span class="text-gray-400 text-sm font-medium">/mwezi</span>
+<span class="text-gray-400 text-sm font-medium">/month</span>
 </div>
 </div>
 <ul class="flex flex-col gap-4 flex-grow">
 <li class="flex items-center gap-3 text-gray-700">
 <span class="material-symbols-outlined text-primary text-xl font-bold">check_circle</span>
-<span class="font-bold">Duka 1 tu</span>
+<span class="font-bold">Duka 1 · Mtumiaji 1</span>
 </li>
 <li class="flex items-center gap-3 text-gray-700">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Bidhaa hadi 100</span>
+<span>Hadi bidhaa 100</span>
 </li>
 <li class="flex items-center gap-3 text-gray-700">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Ripoti za msingi</span>
+<span>Mauzo, stock, matumizi &amp; ripoti za msingi</span>
 </li>
 </ul>
-<button class="w-full flex items-center justify-center rounded-xl h-14 px-4 bg-primary/10 text-primary font-bold hover:bg-primary/20 transition-colors">
-                                Anza Sasa
-                            </button>
+<a href="#pakua" class="w-full flex items-center justify-center rounded-xl h-14 px-4 bg-primary/10 text-primary font-bold hover:bg-primary/20 transition-colors">
+                                Anza Majaribio Bure
+                            </a>
 </div>
-<div class="relative flex flex-col gap-8 rounded-3xl bg-white p-10 shadow-2xl border-4 border-primary scale-105 z-10 overflow-hidden">
+<div class="relative flex flex-col gap-8 rounded-3xl bg-background-light p-10 shadow-xl border-2 border-primary z-10 overflow-hidden">
 <div class="trial-ribbon">Siku 14 Bure</div>
 <div class="absolute top-4 left-10 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Inapendekezwa</div>
-<div class="flex flex-col gap-2">
+<div class="flex flex-col gap-2 pt-4">
 <h3 class="text-primary text-xl font-bold">Professional</h3>
 <div class="flex items-baseline gap-1 text-primary">
 <span class="text-lg font-bold">TSH</span>
 <span class="text-5xl font-black">12K</span>
-<span class="text-gray-400 text-sm font-medium">/mwezi</span>
+<span class="text-gray-400 text-sm font-medium">/month</span>
 </div>
 </div>
 <ul class="flex flex-col gap-4 flex-grow">
 <li class="flex items-center gap-3 text-gray-800">
 <span class="material-symbols-outlined text-primary text-xl font-bold">check_circle</span>
-<span class="font-bold">Hadi maduka 3</span>
+<span class="font-bold">Hadi maduka 3 · watumiaji 3</span>
 </li>
 <li class="flex items-center gap-3 text-gray-800">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
@@ -287,48 +392,48 @@
 </li>
 <li class="flex items-center gap-3 text-gray-800">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="font-semibold">Majukumu na ruhusa za wafanyakazi</span>
+<span class="font-semibold">Majukumu &amp; ruhusa za wafanyakazi</span>
 </li>
 <li class="flex items-center gap-3 text-gray-800">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="font-semibold">Ripoti za kina na usawazishaji wa kiotomatiki (auto-sync)</span>
+<span class="font-semibold">Ripoti za juu &amp; auto-sync</span>
 </li>
 </ul>
-<button class="w-full flex items-center justify-center rounded-xl h-14 px-4 bg-primary text-white font-bold hover:brightness-110 shadow-lg shadow-primary/25 transition-all">
-                                Chagua Mpango Huu
-                            </button>
+<a href="#pakua" class="w-full flex items-center justify-center rounded-xl h-14 px-4 bg-primary text-white font-bold hover:brightness-110 shadow-lg shadow-primary/25 transition-all">
+                                Anza Majaribio Bure
+                            </a>
 </div>
-<div class="relative flex flex-col gap-8 rounded-3xl bg-white p-10 shadow-sm border border-primary/5 hover:shadow-xl transition-all overflow-hidden">
+<div class="relative flex flex-col gap-8 rounded-3xl bg-background-light p-10 border border-primary/5 hover:shadow-xl transition-all overflow-hidden">
 <div class="trial-ribbon">Siku 14 Bure</div>
 <div class="flex flex-col gap-2">
 <h3 class="text-gray-500 text-xl font-bold">Enterprise</h3>
 <div class="flex items-baseline gap-1 text-primary">
 <span class="text-lg font-bold">TSH</span>
 <span class="text-5xl font-black">25K</span>
-<span class="text-gray-400 text-sm font-medium">/mwezi</span>
+<span class="text-gray-400 text-sm font-medium">/month</span>
 </div>
 </div>
 <ul class="flex flex-col gap-4 flex-grow">
 <li class="flex items-center gap-3 text-gray-700">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Maduka na watumiaji wasio na kikomo</span>
+<span>Maduka &amp; watumiaji bila kikomo</span>
 </li>
 <li class="flex items-center gap-3 text-gray-700">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Kila kitu kilichopo Professional</span>
+<span>Kila kitu cha Professional</span>
 </li>
 <li class="flex items-center gap-3 text-gray-700">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Uhamishaji wa ripoti kwa PDF na Excel</span>
+<span>Export ya ripoti PDF &amp; Excel</span>
 </li>
 <li class="flex items-center gap-3 text-gray-700">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Ripoti za muhtasari wa kila wiki</span>
+<span>Ripoti za muhtasari</span>
 </li>
 </ul>
-<button class="w-full flex items-center justify-center rounded-xl h-14 px-4 bg-primary/10 text-primary font-bold hover:bg-primary/20 transition-colors">
-                                Anza Sasa
-                            </button>
+<a href="#pakua" class="w-full flex items-center justify-center rounded-xl h-14 px-4 bg-primary/10 text-primary font-bold hover:bg-primary/20 transition-colors">
+                                Anza Majaribio Bure
+                            </a>
 </div>
 </div>
 </div>
@@ -337,28 +442,27 @@
 <div class="flex flex-col gap-20">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="flex flex-col gap-8">
-<span class="text-accent-gold font-bold uppercase tracking-widest text-sm">Dhamira Yetu</span>
+<span class="text-accent-gold font-bold uppercase tracking-widest text-sm">Maono Yetu</span>
 <h2 class="text-4xl lg:text-5xl font-black leading-tight">
-                                Lengo letu ni Dijitali kwa kila duka la Tanzania
+                                Lengo letu la kidijitali kwa kila duka Tanzania
                             </h2>
 <p class="text-white/80 text-lg leading-relaxed">
-                                Duka Mkononi ilizaliwa kutatua kero za wafanyabiashara wadogo na wa kati (SMEs). Tunaamini teknolojia haipaswi kuwa gharama kubwa, bali nyenzo ya kukuza biashara yako kutoka duka moja hadi matawi nchi nzima. Dhamira yetu ni kuwawezesha wafanyabiashara kutumia mifumo ya kisasa ya usimamizi ili kuongeza ufanisi na uwazi katika mapato yao.
+                                Duka Mkononi ilizaliwa kutatua changamoto za Biashara Ndogo na za Kati (SMEs). Tunaamini teknolojia isiwe mzigo, bali chombo cha kukuza biashara kutoka duka moja hadi matawi nchi nzima. Dhamira yetu ni kuwawezesha wamiliki wa biashara kwa mifumo ya kisasa ya usimamizi ili kuongeza ufanisi na uwazi wa fedha.
                             </p>
 <div class="grid grid-cols-2 gap-8 pt-4">
 <div>
-<h4 class="text-3xl font-black text-accent-gold">2021</h4>
-<p class="text-white/60 text-sm">Tulipoanza Safari</p>
+<h4 class="text-3xl font-black text-accent-gold">Offline-first</h4>
+<p class="text-white/60 text-sm">Inafanya kazi bila intaneti</p>
 </div>
 <div>
-<h4 class="text-3xl font-black text-accent-gold">1k+</h4>
-<p class="text-white/60 text-sm">Maduka Amilifu</p>
+<h4 class="text-3xl font-black text-accent-gold">EN + SW</h4>
+<p class="text-white/60 text-sm">Kiingereza &amp; Kiswahili</p>
 </div>
 </div>
 </div>
-<div class="relative">
-<img alt="Team Duka Mkononi" class="rounded-3xl shadow-2xl border-4 border-white/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRzdKd2td1aIgyRt30u-3Ohga68pTaveMXNxOR_XfH1XsQy3oVQSPg8wDE3CwiFHo8CPocG00jLmmbd8YgJEz4hCzBS5y6YA-6r-eD3w19V31FC0w5qPvFv9ic6F_4mg4EqDjIr7-EKHF5hHOxVDepJE966CJBADf70BN7RZ3euAEjUVH45nSAmJ_wzVTqoHPJYaSdcksr_YAg7iG-CilX5JkiI7UW7ktPp2lP5EkUdGliCdYL1E079D4TFJqQy3BphaCCNoHVY7h1"/>
-<div class="absolute -bottom-6 -left-6 bg-accent-gold p-6 rounded-2xl shadow-xl text-primary">
-<p class="font-black text-2xl italic">"Empowering Tanzanian Retail"</p>
+<div class="relative flex justify-center lg:justify-end">
+<div class="phone-frame">
+<img src="assets/feature-shops.webp" alt="Uchaguzi wa duka la Duka Mkononi" width="720" height="1565" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -368,45 +472,40 @@
 <span class="material-symbols-outlined text-3xl">verified_user</span>
 </div>
 <h3 class="text-2xl font-bold">Uadilifu</h3>
-<p class="text-white/60">Tunaamini katika uwazi na ukweli katika kila huduma tunayotoa kwa wateja wetu na washirika wetu.</p>
+<p class="text-white/60">Tunaamini uwazi na uaminifu katika kila huduma tunayotoa kwa wateja na washirika wetu.</p>
 </div>
 <div class="flex flex-col gap-4">
 <div class="w-14 h-14 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold">
 <span class="material-symbols-outlined text-3xl">lightbulb</span>
 </div>
 <h3 class="text-2xl font-bold">Ubunifu</h3>
-<p class="text-white/60">Tunatumia teknolojia ya kisasa kutengeneza mifumo inayorahisisha kazi ngumu kuwa rahisi na yenye matokeo.</p>
+<p class="text-white/60">Tunatumia teknolojia ya kisasa kujenga mifumo inayogeuza kazi ngumu kuwa matokeo rahisi yenye athari kubwa.</p>
 </div>
 <div class="flex flex-col gap-4">
 <div class="w-14 h-14 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold">
 <span class="material-symbols-outlined text-3xl">support_agent</span>
 </div>
 <h3 class="text-2xl font-bold">Huduma</h3>
-<p class="text-white/60">Mteja ndiye moyo wa biashara yetu. Tunatoa msaada wa karibu ili kuhakikisha unanufaika na programu yetu.</p>
+<p class="text-white/60">Mteja ni moyo wa biashara yetu. Tunatoa msaada wa kujitolea kuhakikisha unanufaika na programu yetu.</p>
 </div>
 </div>
 </div>
 </section>
 <section class="px-4 lg:px-40 py-24 bg-white overflow-hidden" id="remote">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="relative order-2 lg:order-1">
-<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
-<img alt="Simamia biashara popote ulipo" class="rounded-[2.5rem] shadow-2xl relative z-10 w-full object-cover aspect-[4/3] border-4 border-background-light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyBfMcWlzVI7A5VoVPyxlDaudnAc_un188nPYng8ukmkDF6xMslIvbmI8uVtAkb5ZiUgUr6sTtgdAUs7kfV9iy-59Y0ZneO7N-dX4Gwxg-y42tCwrhY75gJwiNNAEAwtWq5VoGWElM1e6cX94mgVxiCzMkrlMRofParYr4HbzjSACUowesD47gOyJ04cWGWV4ha6pD1ZLBqL0k363ohTb9J_ftKcxoR-PSbkNXtV3-AZVZ78xn7-pfEKyjAbvBcqk3AdJr_YIypsFH"/>
-<div class="absolute -bottom-6 -right-6 z-20 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-primary/10">
-<div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">sync</span>
+<div class="relative order-2 lg:order-1 flex justify-center gap-4 sm:gap-6">
+<div class="phone-frame !w-[180px] sm:!w-[220px] rotate-[-4deg]">
+<img src="assets/feature-roles.webp" alt="Majukumu na ruhusa za wafanyakazi" width="720" height="1565" loading="lazy"/>
 </div>
-<div>
-<p class="text-xs text-gray-500 font-bold uppercase tracking-tighter leading-none">Cloud Sync</p>
-<p class="text-primary font-black">Muda Halisi</p>
-</div>
+<div class="phone-frame !w-[180px] sm:!w-[220px] rotate-[4deg] mt-8">
+<img src="assets/feature-credits.webp" alt="Skrini ya wateja wa mkopo" width="720" height="1565" loading="lazy"/>
 </div>
 </div>
 <div class="flex flex-col gap-8 order-1 lg:order-2">
-<span class="text-primary font-bold uppercase tracking-widest text-sm">Urahisi na Portability</span>
+<span class="text-primary font-bold uppercase tracking-widest text-sm">Urahisi &amp; Ubeba</span>
 <h2 class="text-primary text-4xl lg:text-5xl font-black leading-tight">Simamia biashara popote ulipo</h2>
 <p class="text-gray-600 text-lg leading-relaxed">
-                            Usifungwe na kuta nne za duka lako. Duka Mkononi inakupa uhuru wa kusimamia operesheni zako zote kutokea kwenye kiganja chako, iwe uko safarini, nyumbani au matawi mengine.
+                            Usifungwe na kuta nne za duka lako. Duka Mkononi inakupa uhuru wa kusimamia shughuli kutoka simuni — iwe unasafiri, nyumbani, au ukiangalia tawi jingine.
                         </p>
 <div class="flex flex-col gap-6">
 <div class="flex items-start gap-4">
@@ -414,17 +513,17 @@
 <span class="material-symbols-outlined text-xl">cloud_sync</span>
 </div>
 <div>
-<h4 class="text-primary font-extrabold text-xl mb-1">Cloud Synchronization</h4>
-<p class="text-gray-600">Data zako zinasawazishwa kwenye wingu (Cloud) kwa usalama, kukuwezesha kupata taarifa sahihi kwenye kifaa chochote wakati wowote.</p>
+<h4 class="text-primary font-extrabold text-xl mb-1">Sync salama ya data</h4>
+<p class="text-gray-600">Pakia na pakua data ya duka unapokuwa na mtandao. Miradi ya Professional inaweza kuwasha auto-sync ili masasisho yafanyike kwa kazi chache za mkono.</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white shrink-0 mt-1">
-<span class="material-symbols-outlined text-xl">remote_gen</span>
+<span class="material-symbols-outlined text-xl">groups</span>
 </div>
 <div>
-<h4 class="text-primary font-extrabold text-xl mb-1">Remote Monitoring</h4>
-<p class="text-gray-600">Fuatilia mauzo ya kila duka na hali ya stoku kwa wakati halisi bila kulazimika kufika dukani physically.</p>
+<h4 class="text-primary font-extrabold text-xl mb-1">Majukumu ya wafanyakazi &amp; maduka mengi</h4>
+<p class="text-gray-600">Mpe kila mfanyakazi ruhusa sahihi, gawa maduka, na fuatilia mauzo na stock bila kusimama kauntani siku nzima.</p>
 </div>
 </div>
 </div>
@@ -489,33 +588,33 @@
 <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
 <span class="material-symbols-outlined">mail</span>
 </div>
-<span class="font-bold">chingalo-family@gmal.com</span>
+<span class="font-bold">chingalo-family@gmail.com</span>
 </div>
 </div>
 </div>
 <div class="bg-white p-8 lg:p-12 rounded-3xl shadow-xl border border-primary/5">
 <form id="contactForm" class="flex flex-col gap-6">
 <!-- FormSubmit.co Configuration -->
-<input type="hidden" name="_subject" value="Ujumbe Mpya wa Fomu - Duka Mkononi">
+<input type="hidden" name="_subject" value="New Contact Form Submission - Duka Mkononi">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
 <div class="flex flex-col gap-2">
-<label class="text-sm font-bold text-gray-700" for="jina">Jina Kamili</label>
-<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="jina" name="name" placeholder="Andika jina lako hapa" type="text" required/>
+<label class="text-sm font-bold text-gray-700" for="name">Jina Kamili</label>
+<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="name" name="name" placeholder="Andika jina lako hapa" type="text" required/>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="flex flex-col gap-2">
-<label class="text-sm font-bold text-gray-700" for="email">Barua Pepe (Email)</label>
-<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="email" name="email" placeholder="mfano@gmail.com" type="email" required/>
+<label class="text-sm font-bold text-gray-700" for="email">Barua pepe</label>
+<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="email" name="email" placeholder="example@gmail.com" type="email" required/>
 </div>
 <div class="flex flex-col gap-2">
-<label class="text-sm font-bold text-gray-700" for="simu">Namba ya Simu</label>
-<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="simu" name="phone" placeholder="+255..." type="tel" required/>
+<label class="text-sm font-bold text-gray-700" for="phone">Namba ya Simu</label>
+<input class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50" id="phone" name="phone" placeholder="+255..." type="tel" required/>
 </div>
 </div>
 <div class="flex flex-col gap-2">
-<label class="text-sm font-bold text-gray-700" for="ujumbe">Ujumbe Wako</label>
-<textarea class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50 min-h-[150px]" id="ujumbe" name="message" placeholder="Tuambie jinsi tunavyoweza kukusaidia..." required></textarea>
+<label class="text-sm font-bold text-gray-700" for="message">Ujumbe Wako</label>
+<textarea class="rounded-xl border-gray-200 focus:ring-primary focus:border-primary p-4 bg-gray-50 min-h-[150px]" id="message" name="message" placeholder="Tuambie tunawezaje kukusaidia..." required></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold h-14 rounded-xl hover:brightness-110 shadow-lg transition-all" type="submit">
                                 Tuma Ujumbe
@@ -533,7 +632,7 @@
 <h2 class="text-2xl font-black">Duka Mkononi</h2>
 </div>
 <p class="text-white/70 leading-relaxed">
-                        Tunawasaidia wafanyabiashara wadogo na wa kati nchini Tanzania kusimamia biashara zao kwa urahisi wa kidijitali na kuleta ufanisi katika utendaji wa kila siku.
+                        Tunasaidia biashara ndogo na za kati Tanzania kusimamia biashara zao kwa urahisi wa kidijitali na kuleta ufanisi katika shughuli za kila siku.
                     </p>
 <div class="flex gap-4">
 <a class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent-gold hover:text-primary transition-all shadow-lg" href="https://www.instagram.com/duka_mkononi_app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -542,7 +641,7 @@
 <a class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent-gold hover:text-primary transition-all shadow-lg" href="https://wa.me/255742349206" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
 <span class="material-symbols-outlined text-xl">chat</span>
 </a>
-<a class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent-gold hover:text-primary transition-all shadow-lg" href="mailto:chingalo-family@gmail.com" aria-label="Email">
+<a class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent-gold hover:text-primary transition-all shadow-lg" href="mailto:chingalo-family@gmail.com" aria-label="Barua pepe">
 <span class="material-symbols-outlined text-xl">mail</span>
 </a>
 </div>
@@ -551,7 +650,7 @@
 <h4 class="font-bold mb-8 text-xl text-accent-gold">Kampuni</h4>
 <ul class="flex flex-col gap-4 text-white/70">
 <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#kuhusu"><span class="material-symbols-outlined text-xs">arrow_forward</span> Kuhusu Sisi</a></li>
-<li><a class="hover:text-white transition-colors flex items-center gap-2" href="terms.html"><span class="material-symbols-outlined text-xs">arrow_forward</span> Vigezo na Masharti</a></li>
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="terms.html"><span class="material-symbols-outlined text-xs">arrow_forward</span> Sheria na Masharti</a></li>
 <li><a class="hover:text-white transition-colors flex items-center gap-2" href="privacy.html"><span class="material-symbols-outlined text-xs">arrow_forward</span> Sera ya Faragha</a></li>
 </ul>
 </div>
@@ -575,7 +674,7 @@
 <li class="flex items-start gap-4">
 <span class="material-symbols-outlined text-accent-gold">mail</span>
 <div class="flex flex-col">
-<span class="text-xs uppercase font-bold text-white/40">Email</span>
+<span class="text-xs uppercase font-bold text-white/40">Barua pepe</span>
 <span class="text-white">chingalo-family@gmail.com</span>
 </div>
 </li>
@@ -593,7 +692,7 @@
 <p>© <span id="currentYear"></span> Duka Mkononi. Haki zote zimehifadhiwa.</p>
 <div class="flex gap-6">
 <a class="hover:text-white underline" href="privacy.html">Sera ya Faragha</a>
-<a class="hover:text-white underline" href="terms.html">Vigezo na Masharti</a>
+<a class="hover:text-white underline" href="terms.html">Sheria na Masharti</a>
 </div>
 </div>
 </footer>

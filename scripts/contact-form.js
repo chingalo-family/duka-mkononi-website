@@ -1,9 +1,33 @@
-// Set current year in footer
+// Set current year in footer + mobile nav
 document.addEventListener('DOMContentLoaded', function() {
     const yearElements = document.querySelectorAll('#currentYear');
     yearElements.forEach(el => {
         el.textContent = new Date().getFullYear();
     });
+
+    const menuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('mobileMenuIcon');
+    if (menuButton && mobileMenu) {
+        const closeMenu = () => {
+            mobileMenu.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+            if (menuIcon) menuIcon.textContent = 'menu';
+        };
+        const openMenu = () => {
+            mobileMenu.classList.remove('hidden');
+            menuButton.setAttribute('aria-expanded', 'true');
+            if (menuIcon) menuIcon.textContent = 'close';
+        };
+        menuButton.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) closeMenu();
+            else openMenu();
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
 });
 
 // Toast notification function
