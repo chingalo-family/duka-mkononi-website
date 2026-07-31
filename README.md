@@ -28,8 +28,22 @@ Also: `assets/` (app icon + product screenshots), `scripts/contact-form.js`
 ```bash
 git clone https://github.com/chingalo-family/duka-mkononi-website.git
 cd duka-mkononi-website
-python -m http.server 8000
 ```
+
+```bash
+for setup development server
+
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx http-server
+
+# Or simply open the file
+open index.html
+
+```
+
 
 Open http://localhost:8000 (Swahili home) or http://localhost:8000/index-en.html
 
